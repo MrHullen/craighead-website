@@ -51,7 +51,7 @@
     <div class="navbar-end">
 
       <a
-      class="navbar-item"
+      class="navbar-item is-size-5"
       class:is-active={$page.url.pathname.includes('/enrolment')}
       aria-current="{$page.url.pathname.includes('/enrolment') ? 'page' : undefined}"
       href="/enrolment"
@@ -60,7 +60,7 @@
       </a>
 
       <a
-      class="navbar-item"
+      class="navbar-item is-size-5"
       class:is-active={$page.url.pathname.includes('/our-school')}
       aria-current="{$page.url.pathname.includes('/our-school') ? 'page' : undefined}"
       href="/our-school"
@@ -69,12 +69,23 @@
       </a>
 
       <a
-      class="navbar-item"
+      class="navbar-item is-size-5"
       class:is-active={$page.url.pathname.includes('/about-us')}
       aria-current="{$page.url.pathname.includes('/about-us') ? 'page' : undefined}"
       href="/about-us"
       on:click={toggle}>
         About Us
+      </a>
+
+      <a
+      class="navbar-item is-size-5"
+      href="/Application-for-Enrolment.pdf"
+      target="_blank"
+      rel="norefferer"
+      on:click={toggle}>
+        <span class="button is-success is-rounded has-text-weight-bold">
+          Apply Now
+        </span>
       </a>
 
     </div> <!-- navbar-end -->
@@ -85,6 +96,7 @@
   .navbar-item img {
     max-height: 5rem;
   }
+
   .is-brand {
     font-family: 'Abhaya Libre', serif;
     text-transform: uppercase;
@@ -100,5 +112,9 @@
     height: 1px;
     width: 100%;
     margin: 0 0;
+  }
+
+  .navbar-end:last-child {
+    margin-right: 2rem;
   }
 </style>

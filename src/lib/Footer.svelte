@@ -5,27 +5,26 @@
 </script>
 
 <footer class="footer content">
-  <div class="wrapper">
-    <div class="columns">
-      <div class="column">
+    <div class="wrapper">
+      <div> <!-- column 1 -->
         <h2> Contact us </h2>
-        <address>
+        <address class="contact-us">
           {content.addressLine1} <br />
           {content.addressLine2} <br />
           <a href="tel:{content.phoneNumber}">{content.phoneNumber}</a> <br />
           <a href="mailto:{content.emailAddress}">{content.emailAddress}</a> <br />
         </address>
       </div>
-      <div class="column">
+      <div> <!-- column 2 -->
         <h2> Useful links </h2>
-        <ul>
+        <ul class="useful-links">
           {#each content.usefulLinks as usefulLink}
             <li><a href={usefulLink.link}>{usefulLink.title}</a></li>
           {/each}
         </ul>
       </div>
     </div>
-    <div class="content has-text-centered">
+    <div class="has-text-centered">
       <p>
         <strong>&copy; 2023 Craighead Diocesan School</strong>
       </p>
@@ -35,21 +34,26 @@
         <a href="https://github.com/MrHullen" target="_blank" rel="noreferrer">Dave Hullen</a>
       </p>
     </div>
-  </div>
 </footer>
 
 <style>
+  .footer {
+    margin-bottom: 0;
+    padding-bottom: 3rem;
+  }
+
   .wrapper {
-    width: fit-content;
-    margin: 0 auto;
+    margin: 1rem 25%;
+    display: flex;
+    justify-content: space-around;
   }
 
-  ul {
+  address.contact-us {
+    font-style: normal;
+  }
+
+  ul.useful-links {
     list-style-type: none;
-    margin-left: 0;
-  }
-
-  footer {
-    margin-bottom: 0 !important;
+    margin-inline-start: 0;
   }
 </style>

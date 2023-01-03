@@ -1,7 +1,7 @@
 <script>
   import Nav from '$lib/Nav.svelte'
   import Footer from '$lib/Footer.svelte'
-  import "../app.scss"
+  import '../app.scss'
 </script>
 
 <Nav />
@@ -12,7 +12,10 @@
 
 <style>
   :global(body) {
-    background-color: #1E1E1E;
-    height: 100%
+    background-color: #E9E9E9;
+    height: 100%;
+    background-image: url('/background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 </style>
