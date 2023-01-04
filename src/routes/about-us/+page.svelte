@@ -45,7 +45,7 @@
 </main>
 
 <style>
-  main > h1, main > p {
+  main > p {
     background-color: #fff;
   }
 

@@ -2,6 +2,7 @@
   import StudentsWelcome from '$lib/landing-page/StudentsWelcome.svelte'
   import PrincipalsWelcome from '$lib/landing-page/PrincipalsWelcome.svelte'
   import StudentSpotlights from '$lib/landing-page/StudentSpotlights.svelte'
+  import AcademicResults from '$lib/landing-page/AcademicResults.svelte'
 </script>
 
 <main>
@@ -10,6 +11,8 @@
   <PrincipalsWelcome />
 
   <StudentSpotlights />
+
+  <AcademicResults />
 </main>
 
 <style>

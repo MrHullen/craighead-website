@@ -1,4 +1,4 @@
-import { sveltekit } from "@sveltejs/kit/vite";
+import { sveltekit } from "@sveltejs/kit/vite"
 
 /** @type {import('vite').UserConfig} */
 const config = {
@@ -11,6 +11,13 @@ const config = {
       },
     },
   },
-};
+  kit: {
+    vite: {
+        ssr:{
+            noExternal: ['chart.js']
+        }
+    }
+}
+}
 
-export default config;
+export default config

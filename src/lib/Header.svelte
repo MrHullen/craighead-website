@@ -5,7 +5,7 @@
 
 <header class="hero has-background-white has-text-centered">
   <div class="hero-body">
-    <p class="title">
+    <p class="title" id="pageTitle">
       {pageTitle}
     </p>
     <p class="subtitle">

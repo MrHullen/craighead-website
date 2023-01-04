@@ -233,19 +233,6 @@ export function getEnrolmentContent() {
           }
         ],
       },
-      {
-        heading: ``,
-        id: ``,
-        text: `
-          
-        `,
-        photos: [
-          {
-            src: ``,
-            alt: ``,
-          }
-        ],
-      },
     ],
   }
 

@@ -57,7 +57,7 @@ const content = getStudentWelcomeContent()
   }
   
   .welcome-card-items-end {
-    width: 45%;
+    width: 40%;
   }
 
   a {
