@@ -1,6 +1,7 @@
 <script>
   import Header from '$lib/Header.svelte'
   import SideMenu from '$lib/SideMenu.svelte'
+  import BackToTop from '$lib/BackToTop.svelte'
   import { getAboutUsContent } from '$lib/content'
 
   const content = getAboutUsContent()
@@ -42,6 +43,8 @@
       <SideMenu {pageTitle} {subheadings} />
     </div>
   </div>
+
+  <BackToTop />
 </main>
 
 <style>
@@ -55,5 +58,13 @@
 
   article:not(:last-child) {
     margin-bottom: 2rem;
+  }
+
+  /* mobile */
+  @media (max-width: 700px) {
+    .columns {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 </style>

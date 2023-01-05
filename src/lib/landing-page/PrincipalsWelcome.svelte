@@ -7,10 +7,10 @@
 <section class="principals-welcome-card">
   <img src="/lindy-and-student-leaders.jpeg" alt="Lindy Graham and student leaders" />
   <figure>
-    <blockquote class="is-size-5">
+    <blockquote>
       {content.quote}
     </blockquote>
-    <figcaption class="is-size-5">
+    <figcaption>
       {content.principal}
     </figcaption>
   </figure>
@@ -21,11 +21,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.25rem;
   }
 
   img {
     border: 0.5rem solid #E9E9E9;
-    width: 40vw;
+    width: 40%;
   }
 
   figure {
@@ -34,7 +35,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 40vw;
+    width: 40%;
     height: 50%;
     padding: 5rem 3rem;
   }
@@ -43,5 +44,22 @@
     text-align: right;
     width: 100%;
     margin-top: 1rem;
+  }
+
+  /* mobile */
+  @media (max-width: 700px) {
+    .principals-welcome-card {
+      font-size: 1rem;
+      flex-direction: column;
+    }
+
+    img {
+      width: 90%;
+    }
+
+    figure {
+      width: 100%;
+      padding: 2rem 1rem;
+    }
   }
 </style>

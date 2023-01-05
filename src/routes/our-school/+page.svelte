@@ -1,6 +1,7 @@
 <script>
   import Header from '$lib/Header.svelte'
   import SideMenu from '$lib/SideMenu.svelte'
+  import BackToTop from '$lib/BackToTop.svelte'
   import { getOurSchoolContent } from '$lib/content'
 
   const content = getOurSchoolContent()
@@ -42,6 +43,8 @@
       <SideMenu {pageTitle} {subheadings} />
     </div>
   </div>
+
+  <BackToTop />
 </main>
 
 <style>

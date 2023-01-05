@@ -5,11 +5,11 @@
 
 <header class="hero has-background-white has-text-centered">
   <div class="hero-body">
-    <p class="title" id="pageTitle">
+    <h1 class="title" id="page-title">
       {pageTitle}
-    </p>
-    <p class="subtitle">
+    </h1>
+    <h2 class="subtitle">
       {pageSubtitle}
-    </p>
+    </h2>
   </div>
 </header>

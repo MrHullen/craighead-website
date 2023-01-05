@@ -14,6 +14,10 @@
   :global(body) {
     background-color: #E9E9E9;
     height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
     background-image: url('/background-image.jpg');
     background-repeat: no-repeat;
     background-size: cover;

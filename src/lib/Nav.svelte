@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores'
+  import { fly } from 'svelte/transition'
 
 	// Boolean value for burger menu on mobile
   // toggled off whenever $page changes
@@ -38,6 +39,7 @@
     class="navbar-burger burger"
     aria-label="menu"
     aria-expanded="false"
+    class:is-active={active}
     on:click={toggle}>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -112,6 +114,10 @@
     height: 1px;
     width: 100%;
     margin: 0 0;
+  }
+
+  .burger {
+    height: 6rem;
   }
 
   .navbar-end:last-child {

@@ -38,12 +38,11 @@
 
 <style>
   .footer {
-    margin-bottom: 0;
     padding-bottom: 3rem;
   }
 
   .wrapper {
-    margin: 1rem 25%;
+    margin: 1rem 25% 3rem 25%;
     display: flex;
     justify-content: space-around;
   }
@@ -55,5 +54,14 @@
   ul.useful-links {
     list-style-type: none;
     margin-inline-start: 0;
+  }
+
+  /* mobile */
+  @media (max-width: 700px) {
+    .wrapper {
+      margin: 1rem 1rem 3rem 1rem;
+      flex-direction: column;
+      gap: 3rem;
+    }
   }
 </style>

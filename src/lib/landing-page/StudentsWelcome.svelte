@@ -1,7 +1,7 @@
 <script>
   import { getStudentWelcomeContent } from '$lib/content.js'
 
-const content = getStudentWelcomeContent()
+  const content = getStudentWelcomeContent()
 </script>
 
 <section class="welcome-card">
@@ -10,17 +10,17 @@ const content = getStudentWelcomeContent()
   </div>
   <div class="welcome-card-items">
     <div class="welcome-card-items-start">
-      <p class="is-size-5">
+      <p>
         {content.blurb}
       </p>
-      <a class="button is-info is-rounded is-size-5" href="{content.prospectus}">
+      <a class="button is-info is-rounded has-text-weight-bold" href="{content.prospectus}">
         Discover our prospectus
       </a>
     </div>
     <div class="welcome-card-items-end">
       <figure class="image">
         <img class="is-rounded is-square" src="{content.photo}" alt="{content.caption}" />
-        <figcaption class="is-size-5"> {content.caption} </figcaption>
+        <figcaption> {content.caption} </figcaption>
       </figure>
     </div>
   </div>
@@ -30,6 +30,7 @@ const content = getStudentWelcomeContent()
 <style>
   .welcome-card {
     position: relative;
+    font-size: 1.25rem;
   }
 
   /* background */
@@ -52,18 +53,18 @@ const content = getStudentWelcomeContent()
   }
   
   .welcome-card-items-start {
-    width: 40%;
     z-index: 1;
   }
   
-  .welcome-card-items-end {
+  .welcome-card-items-start, .welcome-card-items-end {
     width: 40%;
   }
 
   a {
     display: block;
     width: fit-content;
-    margin: 2rem auto;
+    margin: 2rem auto 0 auto;
+    font-size: 1.25rem;
   }
 
   img {
@@ -77,5 +78,38 @@ const content = getStudentWelcomeContent()
     width: 100%;
     background-color: #E9E9E9;
     padding: 1rem 0;
+  }
+
+  /* mobile */
+  @media (max-width: 700px) {
+    .welcome-card {
+      font-size: 1rem;
+    }
+
+    .welcome-card-bar {
+      height: 66%;
+      top: 34%;
+    }
+
+    .welcome-card-items {
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
+
+    .welcome-card-items-start, .welcome-card-items-end {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    a {
+      font-size: 1rem;
+      margin: 1rem auto;
+    }
+
+    figcaption {
+      bottom: 10%;
+      padding: 0.5rem 0;
+    }
   }
 </style>
