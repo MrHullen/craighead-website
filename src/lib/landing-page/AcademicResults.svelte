@@ -29,6 +29,7 @@
 
   const ueData = {
     title: 'University Entrance',
+    labels: ['2019', '2020', '2021', '2022'],
     data: [
       {
         label: 'Decile 8 - 10 Girls',
@@ -50,6 +51,7 @@
   
   const nceaData = {
     title: 'NCEA Achievement',
+    labels: ['2019', '2020', '2021', '2022'],
     data: [
       {
         label: 'Level 1',
@@ -71,41 +73,59 @@
 
   const endorsementData = {
     title: 'NCEA Endorsement',
+    labels: ['2020', '2021', '2022'],
     data: [
       {
-        label: 'Level 1',
-        data: [94.4, 92.4, 94.5, 100],
-        backgroundColor: '#2E8708',
-      },
-      {
-        label: 'Level 2',
-        data: [95.1, 97.7, 95.2, 100],
+        label: 'Level 1 Merit Endorsement',
+        data: [54, 36.5, 25],
         backgroundColor: '#359A09',
+        stack: "Level 1"
       },
       {
-        label: 'Level 3',
-        data: [91.2, 98, 95.1, 100],
+        label: 'Level 1 Excellence Endorsement',
+        data: [33, 36.5, 25],
         backgroundColor: '#39AB0A',
+        stack: "Level 1"
+      },
+      {
+        label: 'Level 2 Merit Endorsement',
+        data: [33, 47.5, 25],
+        backgroundColor: '#359A09',
+        stack: "Level 2"
+      },
+      {
+        label: 'Level 2 Excellence Endorsement',
+        data: [37, 20.3, 25],
+        backgroundColor: '#39AB0A',
+        stack: "Level 2"
+      },
+      {
+        label: 'Level 3 Merit Endorsement',
+        data: [0, 33, 38.5, 25],
+        backgroundColor: '#359A09',
+        stack: "Level 3"
+      },
+      {
+        label: 'Level 3 Excellence Endorsement',
+        data: [0, 29, 25.6, 25],
+        backgroundColor: '#39AB0A',
+        stack: "Level 3"
       },
     ]
   }
 
   const literacyNumeracyData = {
     title: 'Literacy and Numeracy Achievement',
+    labels: ['Level 1 Literacy', 'Level 1 Numeracy', 'UE Literacy'],
     data: [
       {
-        label: 'Level 1',
-        data: [94.4, 92.4, 94.5, 100],
-        backgroundColor: '#2E8708',
+        label: 'Decile 9',
+        data: [87.6, 96.7, 94.1],
+        backgroundColor: '#7293A0',
       },
       {
-        label: 'Level 2',
-        data: [95.1, 97.7, 95.2, 100],
-        backgroundColor: '#359A09',
-      },
-      {
-        label: 'Level 3',
-        data: [91.2, 98, 95.1, 100],
+        label: 'Craighead',
+        data: [100, 98.2, 95.1],
         backgroundColor: '#39AB0A',
       },
     ]
@@ -114,28 +134,41 @@
   function displayUE() {
     current = 'ue'
     chart.options.plugins.title.text = ueData.title
+    chart.data.labels = ueData.labels
     chart.data.datasets = ueData.data
+    chart.options.scales.x.stacked = false
+    chart.options.scales.y.stacked = false
     chart.update()
   }
 
   function displayNCEA() {
     current = 'ncea'
     chart.options.plugins.title.text = nceaData.title
+    chart.data.labels = nceaData.labels
     chart.data.datasets = nceaData.data
+    chart.options.scales.x.stacked = false
+    chart.options.scales.y.stacked = false
     chart.update()
   }
 
   function displayEndorsement() {
-    current = 'ensdorsement'
+    current = 'endorsement'
     chart.options.plugins.title.text = endorsementData.title
+    chart.data.labels = endorsementData.labels
     chart.data.datasets = endorsementData.data
+    chart.options.scales.x.stacked = true
+    chart.options.scales.y.stacked = true
+    // chart.options.scales.xEndorsement.display = true
     chart.update()
   }
 
   function displayLiteracyNumeracy() {
     current = 'literacyNumeracy'
     chart.options.plugins.title.text = literacyNumeracyData.title
+    chart.data.labels = literacyNumeracyData.labels
     chart.data.datasets = literacyNumeracyData.data
+    chart.options.scales.x.stacked = false
+    chart.options.scales.y.stacked = false
     chart.update()
   }
 
@@ -165,7 +198,16 @@
             }
           },
           scales: {
-            x: { grid: { display: false } },
+            // xEndorsement: {
+            //   type: 'category',
+            //   offset: true,
+            //   labels: ['Level 1', 'Level 2', 'Level 3', 'Level 1', 'Level 2', 'Level 3', 'Level 1', 'Level 2', 'Level 3', 'Level 1', 'Level 2', 'Level 3', ],
+            //   display: false,
+            //   grid: { display: false },
+            // },
+            x: {
+              grid: { display: false },
+            },
             y: {
               min: 0,
               max: 100,
@@ -173,7 +215,7 @@
                 display: true,
                 text: 'Percent of students achieving'
               }
-            }
+            },
           },
           maintainAspectRatio: false
         }
