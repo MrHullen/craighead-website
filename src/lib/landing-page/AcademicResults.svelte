@@ -32,39 +32,80 @@
     data: [
       {
         label: 'Decile 8 - 10 Girls',
-        data: [74.2, 77.7, 76.1, 78],
+        data: [74.2, 77.7, 76.1, 90],
         backgroundColor: '#7293A0',
       },
       {
         label: 'Decile 9 Girls',
-        data: [75, 78.5, 78.9, 80],
+        data: [75, 78.5, 78.9, 90],
         backgroundColor: '#9D7994',
       },
       {
         label: 'Craighead',
-        data: [83, 90, 90.2, 95],
+        data: [83, 90, 90.2, 100],
         backgroundColor: '#39AB0A',
       },
     ]
   }
   
-  // TODO: Update these data values
   const nceaData = {
     title: 'NCEA Achievement',
     data: [
       {
         label: 'Level 1',
-        data: [74.2, 77.7, 76.1, 78],
+        data: [94.4, 92.4, 94.5, 100],
         backgroundColor: '#2E8708',
       },
       {
         label: 'Level 2',
-        data: [75, 78.5, 78.9, 80],
+        data: [95.1, 97.7, 95.2, 100],
         backgroundColor: '#359A09',
       },
       {
         label: 'Level 3',
-        data: [83, 90, 90.2, 95],
+        data: [91.2, 98, 95.1, 100],
+        backgroundColor: '#39AB0A',
+      },
+    ]
+  }
+
+  const endorsementData = {
+    title: 'NCEA Endorsement',
+    data: [
+      {
+        label: 'Level 1',
+        data: [94.4, 92.4, 94.5, 100],
+        backgroundColor: '#2E8708',
+      },
+      {
+        label: 'Level 2',
+        data: [95.1, 97.7, 95.2, 100],
+        backgroundColor: '#359A09',
+      },
+      {
+        label: 'Level 3',
+        data: [91.2, 98, 95.1, 100],
+        backgroundColor: '#39AB0A',
+      },
+    ]
+  }
+
+  const literacyNumeracyData = {
+    title: 'Literacy and Numeracy Achievement',
+    data: [
+      {
+        label: 'Level 1',
+        data: [94.4, 92.4, 94.5, 100],
+        backgroundColor: '#2E8708',
+      },
+      {
+        label: 'Level 2',
+        data: [95.1, 97.7, 95.2, 100],
+        backgroundColor: '#359A09',
+      },
+      {
+        label: 'Level 3',
+        data: [91.2, 98, 95.1, 100],
         backgroundColor: '#39AB0A',
       },
     ]
@@ -81,6 +122,20 @@
     current = 'ncea'
     chart.options.plugins.title.text = nceaData.title
     chart.data.datasets = nceaData.data
+    chart.update()
+  }
+
+  function displayEndorsement() {
+    current = 'ensdorsement'
+    chart.options.plugins.title.text = endorsementData.title
+    chart.data.datasets = endorsementData.data
+    chart.update()
+  }
+
+  function displayLiteracyNumeracy() {
+    current = 'literacyNumeracy'
+    chart.options.plugins.title.text = literacyNumeracyData.title
+    chart.data.datasets = literacyNumeracyData.data
     chart.update()
   }
 
@@ -104,10 +159,21 @@
             title: {
               display: true,
               text: title
+            },
+            legend: {
+              position: 'bottom'
             }
           },
           scales: {
-            x: { grid: { display: false } }
+            x: { grid: { display: false } },
+            y: {
+              min: 0,
+              max: 100,
+              title: {
+                display: true,
+                text: 'Percent of students achieving'
+              }
+            }
           },
           maintainAspectRatio: false
         }
@@ -131,6 +197,18 @@
         class:is-outlined="{current != 'ncea'}"
         on:click={displayNCEA}>
           NCEA Achievement
+        </button>
+      <button
+        class="button is-info is-rounded has-text-weight-bold"
+        class:is-outlined="{current != 'endorsement'}"
+        on:click={displayEndorsement}>
+          NCEA Endorsement
+        </button>
+      <button
+        class="button is-info is-rounded has-text-weight-bold"
+        class:is-outlined="{current != 'literacyNumeracy'}"
+        on:click={displayLiteracyNumeracy}>
+          Literacy & Numeracy
         </button>
     </div>
     <div class="chart-container" style="position: relative">
@@ -163,6 +241,15 @@
 
     .section {
       padding: 1.5rem 1rem;
+    }
+
+    .buttons {
+      flex-direction: column;
+    }
+
+    /* overrides Bulma's behaviour, which is just wrapping buttons */
+    .buttons .button:not(:last-child):not(.is-fullwidth) {
+      margin-right: 0;
     }
   }
 </style>
