@@ -3,14 +3,16 @@
   import PrincipalsWelcome from '$lib/landing-page/PrincipalsWelcome.svelte'
   import StudentSpotlights from '$lib/landing-page/StudentSpotlights.svelte'
   import AcademicResults from '$lib/landing-page/AcademicResults.svelte'
+
+  export let data
 </script>
 
 <main>
-  <StudentsWelcome />
+  <StudentsWelcome content={ data.content.studentWelcome }/>
 
-  <PrincipalsWelcome />
+  <PrincipalsWelcome content={ data.content.principalsWelcome } />
 
-  <StudentSpotlights />
+  <StudentSpotlights content={ data.content.studentSpotlights }/>
 
   <AcademicResults />
 </main>

@@ -1,7 +1,7 @@
 <script>
-  import { getStudentWelcomeContent } from '$lib/content.js'
+  import { PortableText } from '@portabletext/svelte'
 
-  const content = getStudentWelcomeContent()
+  export let content
 </script>
 
 <section class="welcome-card">
@@ -10,17 +10,19 @@
   </div>
   <div class="welcome-card-items">
     <div class="welcome-card-items-start">
-      <p>
-        {content.blurb}
-      </p>
-      <a class="button is-info is-rounded has-text-weight-bold" href="{content.prospectus}">
+      <PortableText value="{content.blurb}" />
+      <a
+      class="button is-info is-rounded has-text-weight-bold"
+      target="_blank"
+      rel="noreferrer"
+      href="{content.prospectus}">
         Discover our prospectus
       </a>
     </div>
     <div class="welcome-card-items-end">
       <figure class="image">
-        <img class="is-rounded is-square" src="{content.photo}" alt="{content.caption}" />
-        <figcaption> {content.caption} </figcaption>
+        <img class="is-rounded is-square" src="{content.imageUrl}" alt="{content.imageAlt}" />
+        <figcaption> {content.imageCaption} </figcaption>
       </figure>
     </div>
   </div>

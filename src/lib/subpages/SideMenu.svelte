@@ -1,20 +1,20 @@
 <script>
-  export let pageTitle
-  export let subheadings
+  export let title
+  export let sections
 </script>
 
 <aside class="menu section">
   <p class="menu-label">
     <a href="#page-title">
-      {pageTitle}
+      {title}
     </a>
     
   </p>
   <ul class="menu-list">
-    {#each subheadings as subheading}
+    {#each sections as section}
       <li>
-        <a href="#{subheading.id}">
-          {subheading.heading}
+        <a href="#{ section.title.replace(/\s+/g, '-').toLowerCase() }">
+          {section.title}
         </a>
       </li>
     {/each}
@@ -22,6 +22,11 @@
 </aside>
 
 <style>
+  :global(html) {
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+
   aside {
     background-color: white;
     position: sticky;

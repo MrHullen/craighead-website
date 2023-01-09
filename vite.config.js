@@ -17,7 +17,7 @@ const config = {
             noExternal: ['chart.js']
         }
     }
-}
+  }
 }
 
 export default config

@@ -1,20 +1,18 @@
 <script>
-  import { getStudentSpotlightsContent } from '$lib/content'
-
-  const content = getStudentSpotlightsContent()
+  export let content
 </script>
 
 <section>
-  {#each content as student}
+  {#each content.studentSpotlights as student}
     <figure class="image">
       <img
       class="is-rounded is-square"
-      src="{student.src}"
-      alt="{student.alt}" />
+      src="{student.imageUrl}"
+      alt="{student.imageAlt}" />
       <figcaption>
-        <p class="space-holder" aria-hidden="true"> {student.caption} </p>
+        <p class="space-holder" aria-hidden="true"> {student.imageCaption} </p>
         <div class="quote-card">
-          <p> {student.caption} </p>
+          <p> {student.imageCaption} </p>
         </div>
       </figcaption>
     </figure>

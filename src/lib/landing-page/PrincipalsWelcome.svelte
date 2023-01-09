@@ -1,14 +1,14 @@
 <script>
-  import { getPrincipalsWelcomeContent } from '$lib/content'
+  import { PortableText } from '@portabletext/svelte'
 
-  const content = getPrincipalsWelcomeContent()
+  export let content
 </script>
 
 <section class="principals-welcome-card">
-  <img src="/lindy-and-student-leaders.jpeg" alt="Lindy Graham and student leaders" />
+  <img src="{content.imageUrl}" alt="{content.imageAlt}" />
   <figure>
     <blockquote>
-      {content.quote}
+      <PortableText value={content.quote} />
     </blockquote>
     <figcaption>
       {content.principal}

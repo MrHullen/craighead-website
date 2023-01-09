@@ -1,7 +1,7 @@
 <script>
-  import { getFooterContent } from '$lib/content.js'
+  import footer from '$lib/footer'
 
-  const content = getFooterContent()
+  const content = $footer
 </script>
 
 <footer class="footer content">

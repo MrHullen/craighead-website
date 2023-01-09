@@ -31,8 +31,8 @@
   .button {
     display: none;
     position: fixed;
-    bottom: 3rem;
-    right: 3rem;
+    bottom: 1rem;
+    right: 1rem;
     z-index: 99;
     width: 3rem;
     height: 3rem;
@@ -54,10 +54,9 @@
     opacity: 0.6;
   }
 
-  @media (max-width: 700px) {
+  @media (min-width: 700px) {
     .button {
-      bottom: 1rem;
-      right: 1rem;
+      display: none;
     }
   }
 </style>

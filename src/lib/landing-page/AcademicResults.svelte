@@ -25,21 +25,19 @@
   let chartCanvas
   let current = 'ue'
 
-	const chartLabels = ['2019', '2020', '2021', '2022']
-
   const ueData = {
     title: 'University Entrance',
     labels: ['2019', '2020', '2021', '2022'],
     data: [
       {
-        label: 'Decile 8 - 10 Girls',
+        label: `Decile 8 - 10 Girls' Schools`,
         data: [74.2, 77.7, 76.1, 90],
         backgroundColor: '#7293A0',
       },
       {
-        label: 'Decile 9 Girls',
+        label: `Decile 9 Girls' Schools`,
         data: [75, 78.5, 78.9, 90],
-        backgroundColor: '#9D7994',
+        backgroundColor: '#1D3549',
       },
       {
         label: 'Craighead',
@@ -56,12 +54,14 @@
       {
         label: 'Level 1',
         data: [94.4, 92.4, 94.5, 100],
-        backgroundColor: '#2E8708',
+        backgroundColor: '#abcea9',
+        borderColor: '#73ad70',
+        borderWidth: 1
       },
       {
         label: 'Level 2',
         data: [95.1, 97.7, 95.2, 100],
-        backgroundColor: '#359A09',
+        backgroundColor: '#73ad70',
       },
       {
         label: 'Level 3',
@@ -78,25 +78,30 @@
       {
         label: 'Level 1 Merit Endorsement',
         data: [54, 36.5, 25],
-        backgroundColor: '#359A09',
+        backgroundColor: '#9cc599',
+        borderColor: '#73ad70',
+        borderWidth: 1,
+        
         stack: "Level 1"
       },
       {
         label: 'Level 1 Excellence Endorsement',
         data: [33, 36.5, 25],
-        backgroundColor: '#39AB0A',
+        backgroundColor: '#abcea9',
+        borderColor: '#73ad70',
+        borderWidth: 1,
         stack: "Level 1"
       },
       {
         label: 'Level 2 Merit Endorsement',
         data: [33, 47.5, 25],
-        backgroundColor: '#359A09',
+        backgroundColor: '#60a05b',
         stack: "Level 2"
       },
       {
         label: 'Level 2 Excellence Endorsement',
         data: [37, 20.3, 25],
-        backgroundColor: '#39AB0A',
+        backgroundColor: '#73ad70',
         stack: "Level 2"
       },
       {
@@ -119,9 +124,9 @@
     labels: ['Level 1 Literacy', 'Level 1 Numeracy', 'UE Literacy'],
     data: [
       {
-        label: 'Decile 9',
+        label: `Decile 9 Schools`,
         data: [87.6, 96.7, 94.1],
-        backgroundColor: '#7293A0',
+        backgroundColor: '#1D3549',
       },
       {
         label: 'Craighead',
@@ -173,7 +178,7 @@
   }
 
   // Initial values for the chart
-  let labels = chartLabels
+  let labels = ueData.labels
   let title = ueData.title
   let data = ueData.data
 

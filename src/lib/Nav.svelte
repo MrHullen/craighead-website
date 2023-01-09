@@ -83,7 +83,7 @@
       class="navbar-item is-size-5"
       href="/Application-for-Enrolment.pdf"
       target="_blank"
-      rel="norefferer"
+      rel="noreferrer"
       on:click={toggle}>
         <span class="button is-success is-rounded has-text-weight-bold">
           Apply Now
