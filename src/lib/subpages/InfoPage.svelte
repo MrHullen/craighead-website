@@ -13,18 +13,17 @@
 <Header title={content.header.title} subtitle={content.header.subheading} />
 
 <main class="content section">
-  
   <p class="section">
     <PortableText value={content.header.intro} />
   </p>
 
   <div class="columns">
-    <div class="column">    
+    <div class="column">
       {#each sections as section}
-      <article class="section">
-        <h2 id="{ section.title.replace(/\s+/g, '-').toLowerCase() }"> {section.title} </h2>
-        <PortableText value={section.text} />
-      </article>
+        <article class="section">
+          <h2 id={section.title.replace(/\s+/g, '-').toLowerCase()}>{section.title}</h2>
+          <PortableText value={section.text} />
+        </article>
       {/each}
     </div>
 

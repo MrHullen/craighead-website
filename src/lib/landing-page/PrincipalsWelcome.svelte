@@ -5,7 +5,7 @@
 </script>
 
 <section class="principals-welcome-card">
-  <img src="{content.imageUrl}" alt="{content.imageAlt}" />
+  <img src={content.imageUrl} alt={content.imageAlt} />
   <figure>
     <blockquote>
       <PortableText value={content.quote} />
@@ -25,12 +25,12 @@
   }
 
   img {
-    border: 0.5rem solid #E9E9E9;
+    border: 0.5rem solid #e9e9e9;
     width: 40%;
   }
 
   figure {
-    background-color: #E9E9E9;
+    background-color: #e9e9e9;
     display: flex;
     justify-content: center;
     align-items: center;

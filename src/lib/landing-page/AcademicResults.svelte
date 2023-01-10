@@ -1,25 +1,8 @@
 <script>
   import { onMount } from 'svelte'
-  import {
-    Chart,
-    Title,
-    Tooltip,
-    Legend,
-    BarController,
-    BarElement,
-    CategoryScale,
-    LinearScale,
-  } from 'chart.js'
+  import { Chart, Title, Tooltip, Legend, BarController, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
-  Chart.register(
-    Title,
-    Tooltip,
-    Legend,
-    BarElement,
-    BarController,
-    CategoryScale,
-    LinearScale
-  )
+  Chart.register(Title, Tooltip, Legend, BarElement, BarController, CategoryScale, LinearScale)
 
   let chart
   let chartCanvas
@@ -44,9 +27,9 @@
         data: [83, 90, 90.2, 100],
         backgroundColor: '#39AB0A',
       },
-    ]
+    ],
   }
-  
+
   const nceaData = {
     title: 'NCEA Achievement',
     labels: ['2019', '2020', '2021', '2022'],
@@ -56,7 +39,7 @@
         data: [94.4, 92.4, 94.5, 100],
         backgroundColor: '#abcea9',
         borderColor: '#73ad70',
-        borderWidth: 1
+        borderWidth: 1,
       },
       {
         label: 'Level 2',
@@ -68,7 +51,7 @@
         data: [91.2, 98, 95.1, 100],
         backgroundColor: '#39AB0A',
       },
-    ]
+    ],
   }
 
   const endorsementData = {
@@ -81,8 +64,8 @@
         backgroundColor: '#9cc599',
         borderColor: '#73ad70',
         borderWidth: 1,
-        
-        stack: "Level 1"
+
+        stack: 'Level 1',
       },
       {
         label: 'Level 1 Excellence Endorsement',
@@ -90,33 +73,33 @@
         backgroundColor: '#abcea9',
         borderColor: '#73ad70',
         borderWidth: 1,
-        stack: "Level 1"
+        stack: 'Level 1',
       },
       {
         label: 'Level 2 Merit Endorsement',
         data: [33, 47.5, 25],
         backgroundColor: '#60a05b',
-        stack: "Level 2"
+        stack: 'Level 2',
       },
       {
         label: 'Level 2 Excellence Endorsement',
         data: [37, 20.3, 25],
         backgroundColor: '#73ad70',
-        stack: "Level 2"
+        stack: 'Level 2',
       },
       {
         label: 'Level 3 Merit Endorsement',
         data: [0, 33, 38.5, 25],
         backgroundColor: '#359A09',
-        stack: "Level 3"
+        stack: 'Level 3',
       },
       {
         label: 'Level 3 Excellence Endorsement',
         data: [0, 29, 25.6, 25],
         backgroundColor: '#39AB0A',
-        stack: "Level 3"
+        stack: 'Level 3',
       },
-    ]
+    ],
   }
 
   const literacyNumeracyData = {
@@ -133,7 +116,7 @@
         data: [100, 98.2, 95.1],
         backgroundColor: '#39AB0A',
       },
-    ]
+    ],
   }
 
   function displayUE() {
@@ -182,81 +165,58 @@
   let title = ueData.title
   let data = ueData.data
 
-  onMount( () => {
+  onMount(() => {
     let ctx = chartCanvas.getContext('2d')
-    chart = new Chart(
-      ctx,
-      {
-        type: 'bar',
-        data: {
-          labels: labels,
-          datasets: data,
+    chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: data,
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: title,
+          },
+          legend: {
+            position: 'bottom',
+          },
         },
-        options: {
-          plugins: {
+        scales: {
+          // xEndorsement: {
+          //   type: 'category',
+          //   offset: true,
+          //   labels: ['Level 1', 'Level 2', 'Level 3', 'Level 1', 'Level 2', 'Level 3', 'Level 1', 'Level 2', 'Level 3', 'Level 1', 'Level 2', 'Level 3', ],
+          //   display: false,
+          //   grid: { display: false },
+          // },
+          x: {
+            grid: { display: false },
+          },
+          y: {
+            min: 0,
+            max: 100,
             title: {
               display: true,
-              text: title
-            },
-            legend: {
-              position: 'bottom'
-            }
-          },
-          scales: {
-            // xEndorsement: {
-            //   type: 'category',
-            //   offset: true,
-            //   labels: ['Level 1', 'Level 2', 'Level 3', 'Level 1', 'Level 2', 'Level 3', 'Level 1', 'Level 2', 'Level 3', 'Level 1', 'Level 2', 'Level 3', ],
-            //   display: false,
-            //   grid: { display: false },
-            // },
-            x: {
-              grid: { display: false },
-            },
-            y: {
-              min: 0,
-              max: 100,
-              title: {
-                display: true,
-                text: 'Percent of students achieving'
-              }
+              text: 'Percent of students achieving',
             },
           },
-          maintainAspectRatio: false
-        }
-      }
-    )
+        },
+        maintainAspectRatio: false,
+      },
+    })
   })
 </script>
 
 <section>
   <div class="content section">
-    <p> Craighead is proud of our girls' academic achievements. Our results are consistently above those of similar schools. </p>
+    <p>Craighead is proud of our girls' academic achievements. Our results are consistently above those of similar schools.</p>
     <div class="buttons">
-      <button
-        class="button is-info is-rounded has-text-weight-bold"
-        class:is-outlined="{current != 'ue'}"
-        on:click={displayUE}>
-          University Entrance
-        </button>
-      <button
-        class="button is-info is-rounded has-text-weight-bold"
-        class:is-outlined="{current != 'ncea'}"
-        on:click={displayNCEA}>
-          NCEA Achievement
-        </button>
-      <button
-        class="button is-info is-rounded has-text-weight-bold"
-        class:is-outlined="{current != 'endorsement'}"
-        on:click={displayEndorsement}>
-          NCEA Endorsement
-        </button>
-      <button
-        class="button is-info is-rounded has-text-weight-bold"
-        class:is-outlined="{current != 'literacyNumeracy'}"
-        on:click={displayLiteracyNumeracy}>
-          Literacy & Numeracy
-        </button>
+      <button class="button is-info is-rounded has-text-weight-bold" class:is-outlined={current != 'ue'} on:click={displayUE}> University Entrance </button>
+      <button class="button is-info is-rounded has-text-weight-bold" class:is-outlined={current != 'ncea'} on:click={displayNCEA}> NCEA Achievement </button>
+      <button class="button is-info is-rounded has-text-weight-bold" class:is-outlined={current != 'endorsement'} on:click={displayEndorsement}> NCEA Endorsement </button>
+      <button class="button is-info is-rounded has-text-weight-bold" class:is-outlined={current != 'literacyNumeracy'} on:click={displayLiteracyNumeracy}> Literacy & Numeracy </button>
     </div>
     <div class="chart-container" style="position: relative">
       <canvas bind:this={chartCanvas} />
@@ -266,7 +226,7 @@
 
 <style>
   section {
-    background-color: #E9E9E9;
+    background-color: #e9e9e9;
     font-size: 1.25rem;
     margin: 0 4rem;
   }
@@ -276,8 +236,8 @@
   }
 
   .chart-container {
-      height: 60vh;
-    }
+    height: 60vh;
+  }
 
   /* mobile */
   @media (max-width: 700px) {

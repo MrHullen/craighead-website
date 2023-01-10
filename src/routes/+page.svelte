@@ -8,11 +8,11 @@
 </script>
 
 <main>
-  <StudentsWelcome content={ data.content.studentWelcome }/>
+  <StudentsWelcome content={data.content.studentWelcome} />
 
-  <PrincipalsWelcome content={ data.content.principalsWelcome } />
+  <PrincipalsWelcome content={data.content.principalsWelcome} />
 
-  <StudentSpotlights content={ data.content.studentSpotlights }/>
+  <StudentSpotlights content={data.content.studentSpotlights} />
 
   <AcademicResults />
 </main>

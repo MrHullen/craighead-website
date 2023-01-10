@@ -20,5 +20,8 @@
     "svelte-preprocess": "^4.10.7",
     "vite": "^4.0.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@sanity/image-url": "^1.0.1"
+  }
 }

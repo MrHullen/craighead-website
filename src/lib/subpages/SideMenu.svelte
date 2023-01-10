@@ -8,12 +8,11 @@
     <a href="#page-title">
       {title}
     </a>
-    
   </p>
   <ul class="menu-list">
     {#each sections as section}
       <li>
-        <a href="#{ section.title.replace(/\s+/g, '-').toLowerCase() }">
+        <a href="#{section.title.replace(/\s+/g, '-').toLowerCase()}">
           {section.title}
         </a>
       </li>

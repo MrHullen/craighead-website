@@ -5,14 +5,11 @@
 <section>
   {#each content.studentSpotlights as student}
     <figure class="image">
-      <img
-      class="is-rounded is-square"
-      src="{student.imageUrl}"
-      alt="{student.imageAlt}" />
+      <img class="is-rounded is-square" src={student.imageUrl} alt={student.imageAlt} />
       <figcaption>
-        <p class="space-holder" aria-hidden="true"> {student.imageCaption} </p>
+        <p class="space-holder" aria-hidden="true">{student.imageCaption}</p>
         <div class="quote-card">
-          <p> {student.imageCaption} </p>
+          <p>{student.imageCaption}</p>
         </div>
       </figcaption>
     </figure>
@@ -30,7 +27,7 @@
   }
 
   img {
-    border: 0.5rem solid #E9E9E9;
+    border: 0.5rem solid #e9e9e9;
     width: 90%;
     margin: 0 auto;
     position: inherit;
@@ -40,7 +37,7 @@
   figcaption {
     position: relative;
   }
-  
+
   figcaption p {
     font-size: 1.25rem;
     padding: 2rem 2rem;
@@ -53,7 +50,7 @@
   .quote-card {
     position: absolute;
     top: -1.5rem;
-    background-color: #E9E9E9;
+    background-color: #e9e9e9;
   }
 
   /* mobile */
@@ -66,7 +63,7 @@
     figure {
       width: 60%;
     }
-    
+
     figcaption p {
       font-size: 1rem;
       padding: 1.5rem 1rem;

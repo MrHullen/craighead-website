@@ -27,12 +27,12 @@ export async function load({ params }) {
 
   if (content) {
     return {
-      content: content
+      content: content,
     }
   }
 
   return {
     status: 500,
-    body: new Error("Internal Server Error")
+    body: new Error('Internal Server Error'),
   }
 }
