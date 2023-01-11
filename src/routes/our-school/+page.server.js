@@ -10,27 +10,33 @@ export async function load({ params }) {
       },
       'academicPerformance': *[_id == 'academicPerformanceSection'][0]{
         title,
-        text
+        text,
+        images
       },
       'learningSupport': *[_id == 'learningSupportSection'][0]{
         title,
-        text
+        text,
+        images
       },
       'schoolStructure': *[_id == 'schoolStructureSection'][0]{
         title,
-        text
+        text,
+        images
       },
       'sporting': *[_id == 'sportingSection'][0]{
         title,
-        text
+        text,
+        images
       },
       'cultural': *[_id == 'culturalSection'][0]{
         title,
-        text
+        text,
+        images
       },
       'facilities': *[_id == 'facilitiesHireSection'][0]{
         title,
-        text
+        text,
+        images
       }
     }
   `)

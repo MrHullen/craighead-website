@@ -2,15 +2,36 @@
   import Header from '$lib/subpages/Header.svelte'
   import SideMenu from '$lib/subpages/SideMenu.svelte'
   import BackToTop from '$lib/subpages/BackToTop.svelte'
+  import ImageModal from '$lib/subpages/ImageModal.svelte'
   import { PortableText } from '@portabletext/svelte'
+  import client from '$lib/client'
+  import imageUrlBuilder from '@sanity/image-url'
 
   export let content
 
+  const builder = imageUrlBuilder(client)
+
+  function urlFor(source) {
+    return builder.image(source)
+  }
+
   // gets all the objects apart from the header and adds them to an array so that #each can iterate over it.
   const sections = Object.values((({ header, ...o }) => o)(content))
+
+  let isActive = false
+  let modalImage = undefined
+
+  $: console.log(isActive)
+
+  function activateModal(image) {
+    isActive = true
+    modalImage = image
+  }
 </script>
 
 <Header title={content.header.title} subtitle={content.header.subheading} />
+
+<ImageModal bind:isActive bind:modalImage />
 
 <main class="content section">
   <p class="section">
@@ -23,6 +44,18 @@
         <article class="section">
           <h2 id={section.title.replace(/\s+/g, '-').toLowerCase()}>{section.title}</h2>
           <PortableText value={section.text} />
+          <div class="images">
+            {#if section.images}
+              {#each section.images as image}
+                <button
+                  on:click={() => {
+                    activateModal(image)
+                  }}>
+                  <img src={urlFor(image).auto('format').height(200).url()} alt={image.alt} />
+                </button>
+              {/each}
+            {/if}
+          </div>
         </article>
       {/each}
     </div>
@@ -44,8 +77,21 @@
     background-color: #fff;
   }
 
+  article > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
   article:not(:last-child) {
     margin-bottom: 2rem;
+  }
+
+  .images > button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0 0;
+    margin: 0 0;
   }
 
   /* mobile */
