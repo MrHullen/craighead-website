@@ -66,7 +66,7 @@
     </div>
   </div>
 
-  <BackToTop />
+  <BackToTop {isActive} />
 </main>
 
 <style>

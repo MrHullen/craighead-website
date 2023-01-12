@@ -84,7 +84,7 @@
   }
 
   /* tablet */
-  @media (max-width: 1000px) {
+  @media (min-width: 701px) and (max-width: 1000px) {
     figcaption p {
       font-size: 1rem;
       padding: 1.5rem 1.5rem;

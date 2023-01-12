@@ -72,7 +72,7 @@
   }
 
   /* tablet */
-  @media (max-width: 1000px) {
+  @media (min-width: 701px) and (max-width: 1000px) {
     .principals-welcome-card {
       font-size: 1rem;
     }

@@ -1,5 +1,6 @@
 <script>
   let active = false
+  export let isActive
   const showOnPx = 200
 
   function goTop() {
@@ -10,10 +11,12 @@
     return document.documentElement || document.body
   }
 
+  $: active = !isActive
+
   function handleOnScroll() {
     if (!scrollContainer()) return
 
-    if (scrollContainer().scrollTop > showOnPx) {
+    if (scrollContainer().scrollTop > showOnPx && !isActive) {
       active = true
     } else {
       active = false

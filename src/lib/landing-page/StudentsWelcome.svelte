@@ -121,7 +121,7 @@
   }
 
   /* tablet */
-  @media (max-width: 1000px) {
+  @media (min-width: 701px) and (max-width: 1000px) {
     .welcome-card,
     a {
       font-size: 1rem;
