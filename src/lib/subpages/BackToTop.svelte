@@ -23,7 +23,7 @@
 
 <svelte:window on:scroll={handleOnScroll} />
 
-<button class="button is-rounded" class:active on:click={goTop}>
+<button class="button" class:active on:click={goTop}>
   <img src="/arrow-up.png" alt="Back to top arrow" />
 </button>
 

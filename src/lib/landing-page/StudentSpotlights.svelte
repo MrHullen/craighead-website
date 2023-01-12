@@ -1,15 +1,24 @@
 <script>
+  import client from '$lib/client'
+  import imageUrlBuilder from '@sanity/image-url'
+
   export let content
+
+  const builder = imageUrlBuilder(client)
+
+  function urlFor(source) {
+    return builder.image(source)
+  }
 </script>
 
 <section>
-  {#each content.studentSpotlights as student}
+  {#each content.studentSpotlights as studentSpotlight}
     <figure class="image">
-      <img class="is-rounded is-square" src={student.imageUrl} alt={student.imageAlt} />
+      <img class="is-rounded is-square" src={urlFor(studentSpotlight).auto('format').height(400).url()} alt={studentSpotlight.alt} />
       <figcaption>
-        <p class="space-holder" aria-hidden="true">{student.imageCaption}</p>
+        <p class="space-holder" aria-hidden="true">{studentSpotlight.caption}</p>
         <div class="quote-card">
-          <p>{student.imageCaption}</p>
+          <p>{studentSpotlight.caption}</p>
         </div>
       </figcaption>
     </figure>
@@ -71,6 +80,14 @@
 
     .quote-card {
       top: -1rem;
+    }
+  }
+
+  /* tablet */
+  @media (max-width: 1000px) {
+    figcaption p {
+      font-size: 1rem;
+      padding: 1.5rem 1.5rem;
     }
   }
 </style>

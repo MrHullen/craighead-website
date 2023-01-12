@@ -8,35 +8,41 @@ export async function load({ params }) {
         subheading,
         intro
       },
-      'academicPerformance': *[_id == 'academicPerformanceSection'][0]{
+      'schoolStructure': *[_id == 'schoolStructureSection'][0]{
         title,
         text,
-        images
+        images,
+        "order": 1,
+      },
+      'boarding': *[_id == 'boardingSection'][0]{
+        title,
+        text,
+        images,
+        "order": 2,
       },
       'learningSupport': *[_id == 'learningSupportSection'][0]{
         title,
         text,
-        images
-      },
-      'schoolStructure': *[_id == 'schoolStructureSection'][0]{
-        title,
-        text,
-        images
+        images,
+        "order": 3,
       },
       'sporting': *[_id == 'sportingSection'][0]{
         title,
         text,
-        images
+        images,
+        "order": 4,
       },
       'cultural': *[_id == 'culturalSection'][0]{
         title,
         text,
-        images
+        images,
+        "order": 5,
       },
       'facilities': *[_id == 'facilitiesHireSection'][0]{
         title,
         text,
-        images
+        images,
+        "order": 6,
       }
     }
   `)

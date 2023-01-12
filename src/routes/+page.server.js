@@ -5,22 +5,15 @@ export async function load({ params }) {
     {
       'studentWelcome': *[_id == 'studentWelcome'][0]{
         blurb,
-        "imageUrl": image.asset->url,
-        "imageAlt": image.alt,
-        "imageCaption": image.caption
+        image
       },
       'principalsWelcome': *[_id == 'principalsWelcome'][0]{
         quote,
         principal,
-        "imageUrl": image.asset->url,
-        "imageAlt": image.alt,
+        image
       },
       'studentSpotlights': *[_id == 'studentSpotlights'][0]{
-        studentSpotlights[]{
-          'imageUrl': asset->url,
-          "imageAlt": alt,
-          "imageCaption": caption
-        }
+        studentSpotlights[]
       }
     }
   `)

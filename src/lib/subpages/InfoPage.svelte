@@ -15,13 +15,14 @@
     return builder.image(source)
   }
 
-  // gets all the objects apart from the header and adds them to an array so that #each can iterate over it.
+  // gets all the objects apart from the header and adds them to an array so that #each can iterate over it, then sorts it into the order defined in the retrieval query (+page.server.js).
   const sections = Object.values((({ header, ...o }) => o)(content))
+  sections.sort((a, b) => {
+    return a.order - b.order
+  })
 
   let isActive = false
   let modalImage = undefined
-
-  $: console.log(isActive)
 
   function activateModal(image) {
     isActive = true
@@ -71,6 +72,7 @@
 <style>
   main > p {
     background-color: #fff;
+    margin-bottom: 2rem;
   }
 
   article {

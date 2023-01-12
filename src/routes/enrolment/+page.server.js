@@ -11,12 +11,14 @@ export async function load({ params }) {
       'domestic': *[_id == 'domesticSection'][0]{
         title,
         text,
-        images
+        images,
+        "order": 1,
       },
       'international': *[_id == 'internationalSection'][0]{
         title,
         text,
-        images
+        images,
+        "order": 2,
       }
     }
   `)

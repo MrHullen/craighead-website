@@ -4,7 +4,7 @@ const client = sanityClient({
   projectId: 'svq88qt7',
   dataset: 'production',
   apiVersion: '2023-01-01',
-  useCdn: false,
+  useCdn: true,
 })
 
 export default client

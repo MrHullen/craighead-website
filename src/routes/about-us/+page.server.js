@@ -12,31 +12,29 @@ export async function load({ params }) {
         title,
         subheading,
         text,
-        images
-      },
-      'boarding': *[_id == 'boardingSection'][0]{
-        title,
-        subheading,
-        text,
-        images
+        images,
+        "order": 1,
       },
       'girls': *[_id == 'girlsSection'][0]{
         title,
         subheading,
         text,
-        images
+        images,
+        "order": 2,
       },
       'oldGirls': *[_id == 'oldGirlsSection'][0]{
         title,
         subheading,
         text,
-        images
+        images,
+        "order": 3,
       },
       'history': *[_id == 'historySection'][0]{
         title,
         subheading,
         text,
-        images
+        images,
+        "order": 4,
       }
     }
   `)

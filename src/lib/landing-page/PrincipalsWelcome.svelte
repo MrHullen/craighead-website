@@ -1,11 +1,19 @@
 <script>
   import { PortableText } from '@portabletext/svelte'
+  import client from '$lib/client'
+  import imageUrlBuilder from '@sanity/image-url'
 
   export let content
+
+  const builder = imageUrlBuilder(client)
+
+  function urlFor(source) {
+    return builder.image(source)
+  }
 </script>
 
 <section class="principals-welcome-card">
-  <img src={content.imageUrl} alt={content.imageAlt} />
+  <img src={urlFor(content.image).auto('format').height(800).url()} alt={content.image.alt} />
   <figure>
     <blockquote>
       <PortableText value={content.quote} />
@@ -60,6 +68,18 @@
     figure {
       width: 100%;
       padding: 2rem 1rem;
+    }
+  }
+
+  /* tablet */
+  @media (max-width: 1000px) {
+    .principals-welcome-card {
+      font-size: 1rem;
+    }
+
+    figure {
+      width: 50%;
+      padding: 2rem 2rem;
     }
   }
 </style>

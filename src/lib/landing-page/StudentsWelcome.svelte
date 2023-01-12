@@ -1,7 +1,15 @@
 <script>
   import { PortableText } from '@portabletext/svelte'
+  import client from '$lib/client'
+  import imageUrlBuilder from '@sanity/image-url'
 
   export let content
+
+  const builder = imageUrlBuilder(client)
+
+  function urlFor(source) {
+    return builder.image(source)
+  }
 
   content.prospectus = content.prospectus ? content.prospectus : `http://dev.craighead.school.nz/brochures/ProspectusBrochure/Prospectusbrochure_2020-07-01_04-09-45.html`
 </script>
@@ -17,8 +25,8 @@
     </div>
     <div class="welcome-card-items-end">
       <figure class="image">
-        <img class="is-rounded is-square" src={content.imageUrl} alt={content.imageAlt} />
-        <figcaption>{content.imageCaption}</figcaption>
+        <img class="is-rounded is-square" src={urlFor(content.image).auto('format').height(800).url()} alt={content.image.alt} />
+        <figcaption>{content.image.caption}</figcaption>
       </figure>
     </div>
   </div>
@@ -104,6 +112,24 @@
     a {
       font-size: 1rem;
       margin: 1rem auto;
+    }
+
+    figcaption {
+      bottom: 10%;
+      padding: 0.5rem 0;
+    }
+  }
+
+  /* tablet */
+  @media (max-width: 1000px) {
+    .welcome-card,
+    a {
+      font-size: 1rem;
+    }
+
+    .welcome-card-bar {
+      height: 90%;
+      top: 5%;
     }
 
     figcaption {

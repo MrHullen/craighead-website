@@ -5,6 +5,7 @@
   import client from '$lib/client'
   import imageUrlBuilder from '@sanity/image-url'
   import { onMount } from 'svelte'
+  import { setContext } from 'svelte'
 
   const builder = imageUrlBuilder(client)
 
@@ -13,6 +14,8 @@
   }
 
   export let data
+
+  setContext('logo', data.assets.logo)
 
   onMount(() => {
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)

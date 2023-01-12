@@ -37,7 +37,7 @@
       href="/">
       <img class="image" src={urlFor(logo).width(200).url()} alt="Craighead logo" />
       <div class="is-brand has-text-dark">
-        <span class="is-brand-top mb-0 is-size-3"> Craighead </span>
+        <span class="is-brand-top is-size-3"> Craighead </span>
         <hr />
         <span class="is-brand-bottom is-size-5"> Diocesan School </span>
       </div>
@@ -83,6 +83,10 @@
     align-items: center;
     justify-content: center;
     margin-left: 1.5rem;
+  }
+
+  .is-brand-top {
+    margin-bottom: -0.45rem;
   }
 
   hr {
