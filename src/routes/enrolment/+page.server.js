@@ -8,17 +8,24 @@ export async function load({ params }) {
         subheading,
         intro
       },
+      'girls': *[_id == 'girlsSection'][0]{
+        title,
+        subheading,
+        text,
+        images,
+        "order": 1,
+      },
       'domestic': *[_id == 'domesticSection'][0]{
         title,
         text,
         images,
-        "order": 1,
+        "order": 2,
       },
       'international': *[_id == 'internationalSection'][0]{
         title,
         text,
         images,
-        "order": 2,
+        "order": 3,
       }
     }
   `)

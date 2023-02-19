@@ -15,23 +15,22 @@ export async function load({ params }) {
         images,
         "order": 1,
       },
-      'girls': *[_id == 'girlsSection'][0]{
+      'oldGirls': *[_id == 'oldGirlsSection'][0]{
         title,
         subheading,
         text,
         images,
         "order": 2,
       },
-      'oldGirls': *[_id == 'oldGirlsSection'][0]{
+      'history': *[_id == 'historySection'][0]{
         title,
         subheading,
         text,
         images,
         "order": 3,
       },
-      'history': *[_id == 'historySection'][0]{
+      'facilities': *[_id == 'facilitiesHireSection'][0]{
         title,
-        subheading,
         text,
         images,
         "order": 4,

@@ -37,12 +37,6 @@ export async function load({ params }) {
         text,
         images,
         "order": 5,
-      },
-      'facilities': *[_id == 'facilitiesHireSection'][0]{
-        title,
-        text,
-        images,
-        "order": 6,
       }
     }
   `)

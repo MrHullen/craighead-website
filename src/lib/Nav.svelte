@@ -2,6 +2,7 @@
   import { page } from '$app/stores'
   import client from '$lib/client'
   import imageUrlBuilder from '@sanity/image-url'
+  import CraigheadLogo from './CraigheadLogo.svelte'
 
   export let logo
   export let application
@@ -35,12 +36,7 @@
       }}
       aria-current={$page.url.pathname == '/' ? 'page' : undefined}
       href="/">
-      <img class="image" src={urlFor(logo).width(200).url()} alt="Craighead logo" />
-      <div class="is-brand has-text-dark">
-        <span class="is-brand-top is-size-3"> Craighead </span>
-        <hr />
-        <span class="is-brand-bottom is-size-5"> Diocesan School </span>
-      </div>
+      <CraigheadLogo {logo} />
     </a>
 
     <!-- svelte-ignore a11y-missing-attribute -->
@@ -71,31 +67,6 @@
 </nav>
 
 <style>
-  .navbar-item img {
-    max-height: 5rem;
-  }
-
-  .is-brand {
-    font-family: 'Abhaya Libre', serif;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1.5rem;
-  }
-
-  .is-brand-top {
-    margin-bottom: -0.45rem;
-  }
-
-  hr {
-    background-color: hsl(0, 0%, 21%);
-    height: 1px;
-    width: 100%;
-    margin: 0 0;
-  }
-
   .burger {
     height: 6rem;
   }
