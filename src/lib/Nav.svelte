@@ -57,7 +57,7 @@
 
       <a class="navbar-item is-size-5" class:is-active={$page.url.pathname.includes('/about-us')} aria-current={$page.url.pathname.includes('/about-us') ? 'page' : undefined} href="/about-us" on:click={toggle}> About Us </a>
 
-      <a class="navbar-item is-size-5" href={application} target="_blank" rel="noreferrer" on:click={toggle}>
+      <a class="navbar-item is-size-5" class:is-active={$page.url.pathname.includes('/apply')} aria-current={$page.url.pathname.includes('/apply') ? 'page' : undefined} href="/apply" on:click={toggle}>
         <span class="button is-success is-rounded has-text-weight-bold"> Apply Now </span>
       </a>
     </div>

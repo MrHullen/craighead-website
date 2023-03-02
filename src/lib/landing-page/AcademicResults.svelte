@@ -36,19 +36,19 @@
     data: [
       {
         label: 'Level 1',
-        data: [94.4, 92.4, 94.5, 100],
+        data: [50, 94.4, 92.4, 94.5, 100],
         backgroundColor: '#abcea9',
         borderColor: '#73ad70',
         borderWidth: 1,
       },
       {
         label: 'Level 2',
-        data: [95.1, 97.7, 95.2, 100],
+        data: [50, 95.1, 97.7, 95.2, 100],
         backgroundColor: '#73ad70',
       },
       {
         label: 'Level 3',
-        data: [91.2, 98, 95.1, 100],
+        data: [50, 91.2, 98, 95.1, 100],
         backgroundColor: '#39AB0A',
       },
     ],
@@ -56,7 +56,7 @@
 
   const endorsementData = {
     title: 'NCEA Endorsement',
-    labels: ['2020', '2021', '2022'],
+    labels: ['2019', '2020', '2021', '2022'],
     data: [
       {
         label: 'Level 1 Merit Endorsement',
