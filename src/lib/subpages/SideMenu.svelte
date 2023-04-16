@@ -1,11 +1,21 @@
 <script>
   export let title
   export let sections
+
+  function goTop() {
+    if (!document.documentElement || !document.body) return
+    document.body.scrollIntoView({ behavior: 'smooth' })
+  }
 </script>
 
 <aside class="menu section">
   <p class="menu-label">
-    <a href="#page-title">
+    <a
+      href={undefined}
+      on:click={() => {
+        goTop()
+        return false
+      }}>
       {title}
     </a>
   </p>
@@ -24,6 +34,7 @@
   :global(html) {
     overflow-x: visible;
     overflow-y: visible;
+    scroll-behavior: smooth;
   }
 
   aside {
