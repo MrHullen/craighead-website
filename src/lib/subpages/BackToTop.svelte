@@ -43,10 +43,6 @@
     padding: 0 0;
   }
 
-  .button.is-rounded {
-    padding: 0 0;
-  }
-
   .active {
     display: block;
   }

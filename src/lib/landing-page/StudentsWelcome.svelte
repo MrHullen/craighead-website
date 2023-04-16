@@ -25,7 +25,7 @@
     </div>
     <div class="welcome-card-items-end">
       <figure class="image">
-        <img class="is-rounded is-square" src={urlFor(content.image).auto('format').height(800).url()} alt={content.image.alt} />
+        <img class="is-rounded is-square" src={urlFor(content.image).auto('format').height(800).width(800).url()} alt={content.image.alt} />
         <figcaption>{content.image.caption}</figcaption>
       </figure>
     </div>
