@@ -29,7 +29,7 @@
   })
 </script>
 
-<Nav logo={data.assets.logo} application={data.assets.application} />
+<Nav logo={data.assets.logo} />
 
 <slot />
 

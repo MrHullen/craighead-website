@@ -1,4 +1,6 @@
 <script>
+  import { page } from '$app/stores'
+
   export let title
   export let sections
 
@@ -6,12 +8,18 @@
     if (!document.documentElement || !document.body) return
     document.body.scrollIntoView({ behavior: 'smooth' })
   }
+
+  function test(thing) {
+    console.log(thing)
+  }
 </script>
 
 <aside class="menu section">
   <p class="menu-label">
     <a
-      href={undefined}
+      href="#"
+      title="Go back to the top."
+      class="is-craighead-green"
       on:click={() => {
         goTop()
         return false
@@ -22,7 +30,13 @@
   <ul class="menu-list">
     {#each sections as section}
       <li>
-        <a href="#{section.title.replace(/\s+/g, '-').toLowerCase()}">
+        <a
+          href="#{section.title.replace(/\s+/g, '-').toLowerCase()}"
+          class:is-active={$page.url.href.includes(`#${section.title.replace(/\s+/g, '-').toLowerCase()}`)}
+          aria-current={$page.url.href.includes(`#${section.title.replace(/\s+/g, '-').toLowerCase()}`) ? 'page' : undefined}
+          on:click={() => {
+            test($page.url.href)
+          }}>
           {section.title}
         </a>
       </li>

@@ -5,7 +5,6 @@
   import CraigheadLogo from './CraigheadLogo.svelte'
 
   export let logo
-  export let application
 
   const builder = imageUrlBuilder(client)
 
@@ -51,11 +50,11 @@
 
   <div class="navbar-menu" class:is-active={active}>
     <div class="navbar-end">
-      <a class="navbar-item is-size-5" class:is-active={$page.url.pathname.includes('/enrolment')} aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} href="/enrolment" on:click={toggle}> Enrolment </a>
+      <a class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/enrolment')} aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} href="/enrolment" on:click={toggle}> Enrolment </a>
 
-      <a class="navbar-item is-size-5" class:is-active={$page.url.pathname.includes('/our-school')} aria-current={$page.url.pathname.includes('/our-school') ? 'page' : undefined} href="/our-school" on:click={toggle}> Our School </a>
+      <a class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/our-school')} aria-current={$page.url.pathname.includes('/our-school') ? 'page' : undefined} href="/our-school" on:click={toggle}> Our School </a>
 
-      <a class="navbar-item is-size-5" class:is-active={$page.url.pathname.includes('/about-us')} aria-current={$page.url.pathname.includes('/about-us') ? 'page' : undefined} href="/about-us" on:click={toggle}> About Us </a>
+      <a class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/about-us')} aria-current={$page.url.pathname.includes('/about-us') ? 'page' : undefined} href="/about-us" on:click={toggle}> About Us </a>
 
       <a class="navbar-item is-size-5" class:is-active={$page.url.pathname.includes('/apply')} aria-current={$page.url.pathname.includes('/apply') ? 'page' : undefined} href="/apply" on:click={toggle}>
         <span class="button is-success is-rounded has-text-weight-bold"> Apply Now </span>
