@@ -14,7 +14,7 @@
 <section>
   {#each content.studentSpotlights as studentSpotlight}
     <figure class="image">
-      <img class="is-rounded is-square" src={urlFor(studentSpotlight).auto('format').height(400).url()} alt={studentSpotlight.alt} />
+      <img class="is-rounded is-square" src={urlFor(studentSpotlight).auto('format').height(400).width(400).url()} alt={studentSpotlight.alt} />
       <figcaption>
         <p class="space-holder" aria-hidden="true">{studentSpotlight.caption}</p>
         <div class="quote-card">
