@@ -50,11 +50,59 @@
 
   <div class="navbar-menu" class:is-active={active}>
     <div class="navbar-end">
-      <a class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/enrolment')} aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} href="/enrolment" on:click={toggle}> Enrolment </a>
+      <div class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/enrolment')}>
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <a class="has-text-dark" aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} href="/enrolment" on:click={toggle}> Enrolment </a>
+          </div>
+          <div class="dropdown-menu">
+            <div class="dropdown-content">
+              <a class="dropdown-item has-text-dark" href="/enrolment#a-girls'-school">A Girls' School</a>
+              <a class="dropdown-item has-text-dark" href="/enrolment#domestic">Domestic</a>
+              <a class="dropdown-item has-text-dark" href="/enrolment#international">International</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/our-school')}>
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <a class="has-text-dark" aria-current={$page.url.pathname.includes('/our-school') ? 'page' : undefined} href="/our-school" on:click={toggle}> Our School </a>
+          </div>
+          <div class="dropdown-menu">
+            <div class="dropdown-content">
+              <a class="dropdown-item has-text-dark" href="/our-school#school-structure">School Structure</a>
+              <a class="dropdown-item has-text-dark" href="/our-school#boarding">Boarding</a>
+              <a class="dropdown-item has-text-dark" href="/our-school#learning-support">Learning Support</a>
+              <a class="dropdown-item has-text-dark" href="/our-school#sports">Sports</a>
+              <a class="dropdown-item has-text-dark" href="/our-school#culture-and-performing-arts">Cultural and Performing Arts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/about-us')}>
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <a class="has-text-dark" aria-current={$page.url.pathname.includes('/about-us') ? 'page' : undefined} href="/about-us" on:click={toggle}> About Us </a>
+          </div>
+          <div class="dropdown-menu">
+            <div class="dropdown-content">
+              <a class="dropdown-item has-text-dark" href="/about-us#special-character">Special Character</a>
+              <a class="dropdown-item has-text-dark" href="/about-us#old-girls'-association">Old Girls' Association</a>
+              <a class="dropdown-item has-text-dark" href="/about-us#history">History</a>
+              <a class="dropdown-item has-text-dark" href="/about-us#facilities-hire">Facilities Hire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <a class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/enrolment')} aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} href="/enrolment" on:click={toggle}> Enrolment </a>
 
       <a class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/our-school')} aria-current={$page.url.pathname.includes('/our-school') ? 'page' : undefined} href="/our-school" on:click={toggle}> Our School </a>
 
-      <a class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/about-us')} aria-current={$page.url.pathname.includes('/about-us') ? 'page' : undefined} href="/about-us" on:click={toggle}> About Us </a>
+      <a class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/about-us')} aria-current={$page.url.pathname.includes('/about-us') ? 'page' : undefined} href="/about-us" on:click={toggle}> About Us </a> -->
 
       <a class="navbar-item is-size-5" class:is-active={$page.url.pathname.includes('/apply')} aria-current={$page.url.pathname.includes('/apply') ? 'page' : undefined} href="/apply" on:click={toggle}>
         <span class="button is-success is-rounded has-text-weight-bold"> Apply Now </span>
