@@ -57,9 +57,9 @@
           </div>
           <div class="dropdown-menu">
             <div class="dropdown-content">
-              <a class="dropdown-item has-text-dark" href="/enrolment#a-girls'-school">A Girls' School</a>
-              <a class="dropdown-item has-text-dark" href="/enrolment#domestic">Domestic</a>
-              <a class="dropdown-item has-text-dark" href="/enrolment#international">International</a>
+              <a class="dropdown-item" href="/enrolment#a-girls'-school">A Girls' School</a>
+              <a class="dropdown-item" href="/enrolment#domestic">Domestic</a>
+              <a class="dropdown-item" href="/enrolment#international">International</a>
             </div>
           </div>
         </div>
@@ -72,11 +72,11 @@
           </div>
           <div class="dropdown-menu">
             <div class="dropdown-content">
-              <a class="dropdown-item has-text-dark" href="/our-school#school-structure">School Structure</a>
-              <a class="dropdown-item has-text-dark" href="/our-school#boarding">Boarding</a>
-              <a class="dropdown-item has-text-dark" href="/our-school#learning-support">Learning Support</a>
-              <a class="dropdown-item has-text-dark" href="/our-school#sports">Sports</a>
-              <a class="dropdown-item has-text-dark" href="/our-school#culture-and-performing-arts">Cultural and Performing Arts</a>
+              <a class="dropdown-item" href="/our-school#school-structure">School Structure</a>
+              <a class="dropdown-item" href="/our-school#boarding">Boarding</a>
+              <a class="dropdown-item" href="/our-school#learning-support">Learning Support</a>
+              <a class="dropdown-item" href="/our-school#sports">Sports</a>
+              <a class="dropdown-item" href="/our-school#culture-and-performing-arts">Cultural and Performing Arts</a>
             </div>
           </div>
         </div>
@@ -89,10 +89,10 @@
           </div>
           <div class="dropdown-menu">
             <div class="dropdown-content">
-              <a class="dropdown-item has-text-dark" href="/about-us#special-character">Special Character</a>
-              <a class="dropdown-item has-text-dark" href="/about-us#old-girls'-association">Old Girls' Association</a>
-              <a class="dropdown-item has-text-dark" href="/about-us#history">History</a>
-              <a class="dropdown-item has-text-dark" href="/about-us#facilities-hire">Facilities Hire</a>
+              <a class="dropdown-item" href="/about-us#special-character">Special Character</a>
+              <a class="dropdown-item" href="/about-us#old-girls'-association">Old Girls' Association</a>
+              <a class="dropdown-item" href="/about-us#history">History</a>
+              <a class="dropdown-item" href="/about-us#facilities-hire">Facilities Hire</a>
             </div>
           </div>
         </div>
