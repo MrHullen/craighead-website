@@ -12,6 +12,7 @@ export default writable({
     { title: `KAMAR Student/Parent Portal`, link: `https://portal.craighead.school.nz/index.php?redirect=1&redirect=3` },
     { title: `Craighead Sports Portal`, link: `https://www.sporty.co.nz/craighead` },
     { title: `Wellbeing Website`, link: `https://sites.google.com/craighead.school.nz/studentwellbeingsite/home` },
+    { title: `School Policies and Procedures`, link: `https://craighead.schooldocs.co.nz/` },
     { title: `Website Terms & Conditions`, link: `https://craighead.school.nz/2022-website-terms-conditions/` },
   ],
 })

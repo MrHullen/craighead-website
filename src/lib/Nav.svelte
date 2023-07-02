@@ -4,6 +4,10 @@
   import imageUrlBuilder from '@sanity/image-url'
   import CraigheadLogo from './CraigheadLogo.svelte'
 
+  // for useful links
+  import footer from '$lib/footer'
+  const content = $footer
+
   export let logo
 
   const builder = imageUrlBuilder(client)
@@ -26,7 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap" rel="stylesheet" />
 </svelte:head>
 
-<nav class="navbar" aria-label="main navigation">
+<nav class="navbar is-fixed-top" aria-label="main navigation">
   <div class="navbar-brand">
     <a
       class="navbar-item"
@@ -98,6 +102,21 @@
         </div>
       </div>
 
+      <div class="navbar-item is-tab is-size-5">
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <div class="has-text-dark pointer" href="#" on:click={toggle}> Parents </div>
+          </div>
+          <div class="dropdown-menu">
+            <div class="dropdown-content">
+              {#each content.usefulLinks as usefulLink}
+                <a class="dropdown-item" href="{usefulLink.link}">{usefulLink.title}</a>
+              {/each}
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- <a class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/enrolment')} aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} href="/enrolment" on:click={toggle}> Enrolment </a>
 
       <a class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/our-school')} aria-current={$page.url.pathname.includes('/our-school') ? 'page' : undefined} href="/our-school" on:click={toggle}> Our School </a>
@@ -116,6 +135,10 @@
 <style>
   .burger {
     height: 6rem;
+  }
+
+  .pointer {
+    cursor: pointer;
   }
 
   .navbar-end:last-child {

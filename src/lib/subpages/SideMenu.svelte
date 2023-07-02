@@ -54,7 +54,7 @@
   aside {
     background-color: white;
     position: sticky;
-    top: 3rem;
+    top: 7rem;
   }
 
   aside ul {
