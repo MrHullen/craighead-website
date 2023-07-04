@@ -1,7 +1,6 @@
 /* Variables and mixins declared here will be available in all other SCSS files */ /* https://github.com/jgthms/bulma/issues/1293 */
 
 $craighead-green: #055356;
-$white: #ffffff;
 
 $body-overflow-y: auto;
 $navbar-height: 5rem;
@@ -25,7 +24,7 @@ $navbar-tab-active-border-bottom-color: $craighead-green;
 $navbar-item-hover-color: $craighead-green;
 $navbar-tab-hover-border-bottom-color: $craighead-green;
 
-$dropdown-item-hover-color: #fff;
+// $dropdown-item-hover-color: #fff;
 $dropdown-item-hover-background-color: $craighead-green;
 
 $menu-label-font-size: 1em;

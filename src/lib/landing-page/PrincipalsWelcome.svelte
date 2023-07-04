@@ -21,6 +21,7 @@
     <figcaption>
       {content.principal}
     </figcaption>
+    <a class="button is-info is-rounded has-text-weight-bold" target="_blank" rel="noreferrer" href="/our-school"> Explore our school </a>
   </figure>
 </section>
 
@@ -33,12 +34,14 @@
   }
 
   img {
-    border: 0.5rem solid #e9e9e9;
+    /* border: 0.5rem solid #e9e9e9; */
+    border: 0.5rem solid #fff;
     width: 40%;
   }
 
   figure {
-    background-color: #e9e9e9;
+    /* background-color: #e9e9e9; */
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,6 +55,13 @@
     text-align: right;
     width: 100%;
     margin-top: 1rem;
+  }
+
+  a {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0 auto;
+    font-size: 1.25rem;
   }
 
   /* mobile */

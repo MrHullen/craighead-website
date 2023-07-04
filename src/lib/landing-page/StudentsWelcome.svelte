@@ -42,7 +42,8 @@
 
   .welcome-card-bar {
     position: absolute;
-    background-color: #e9e9e9;
+    /* background-color: #e9e9e9; */
+    background-color: #fff;
     width: 100%;
     height: 50%;
     top: 25%;
@@ -74,15 +75,20 @@
   }
 
   img {
-    border: 0.5rem solid #e9e9e9;
+    /* border: 0.5rem solid #e9e9e9; */
+    border: 0.5rem solid #fff;
   }
 
   figcaption {
+    display: none;
+
+    /* if the bar is wanted back: */
     position: absolute;
     bottom: 25%;
     text-align: center;
     width: 100%;
-    background-color: #e9e9e9;
+    /* background-color: #e9e9e9; */
+    background-color: #fff;
     padding: 1rem 0;
   }
 

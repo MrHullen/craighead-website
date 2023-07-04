@@ -36,7 +36,8 @@
   }
 
   img {
-    border: 0.5rem solid #e9e9e9;
+    /* border: 0.5rem solid #e9e9e9; */
+    border: 0.5rem solid #fff;
     width: 90%;
     margin: 0 auto;
     position: inherit;
@@ -59,7 +60,8 @@
   .quote-card {
     position: absolute;
     top: -1.5rem;
-    background-color: #e9e9e9;
+    /* background-color: #e9e9e9; */
+    background-color: #fff;
   }
 
   /* mobile */

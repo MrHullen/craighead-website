@@ -250,7 +250,8 @@
 
 <style>
   section {
-    background-color: #e9e9e9;
+    /* background-color: #e9e9e9; */
+    background-color: #fff;
     font-size: 1.25rem;
     margin: 0 4rem;
   }
