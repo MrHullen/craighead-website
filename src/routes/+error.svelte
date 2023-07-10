@@ -12,9 +12,9 @@
   }
   
   if (cdsSubdomainURL.startsWith("http://craighead")) {
-    cdsSubdomainURL = cdsSubdomainURL.replace("http://", "http://cds")
+    cdsSubdomainURL = cdsSubdomainURL.replace("http://", "http://cds.")
   } else if (cdsSubdomainURL.startsWith("https://craighead")) {
-    cdsSubdomainURL = cdsSubdomainURL.replace("https://", "https://cds")
+    cdsSubdomainURL = cdsSubdomainURL.replace("https://", "https://cds.")
   }
 </script>
 
