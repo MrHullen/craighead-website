@@ -20,8 +20,15 @@
   </div>
   <div class="welcome-card-items">
     <div class="welcome-card-items-start">
-      <PortableText value={content.blurb} />
-      <a class="button is-info is-rounded has-text-weight-bold" target="_blank" rel="noreferrer" href={content.prospectus}> Discover our prospectus </a>
+      <figure>
+        <blockquote>
+          <PortableText value={content.blurb} />
+        </blockquote>
+        <figcaption>
+          {content.image.caption}
+        </figcaption>
+        <a class="button is-info is-rounded has-text-weight-bold" target="_blank" rel="noreferrer" href={content.prospectus}> Discover our prospectus </a>
+      </figure>
     </div>
     <div class="welcome-card-items-end">
       <figure class="image">
@@ -45,8 +52,8 @@
     /* background-color: #e9e9e9; */
     background-color: #fff;
     width: 100%;
-    height: 50%;
-    top: 25%;
+    height: 60%;
+    top: 20%;
   }
 
   /* foreground */
@@ -79,7 +86,14 @@
     border: 0.5rem solid #fff;
   }
 
-  figcaption {
+  .welcome-card-items-start figcaption {
+    text-align: right;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .welcome-card-items-end figcaption {
+    /* remove bar over photo */
     display: none;
 
     /* if the bar is wanted back: */

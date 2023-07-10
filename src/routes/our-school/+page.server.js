@@ -14,29 +14,35 @@ export async function load({ params }) {
         images,
         "order": 1,
       },
-      'boarding': *[_id == 'boardingSection'][0]{
+      'our-people': *[_id == 'ourPeopleSection'][0]{
         title,
         text,
         images,
         "order": 2,
       },
-      'learningSupport': *[_id == 'learningSupportSection'][0]{
+      'boarding': *[_id == 'boardingSection'][0]{
         title,
         text,
         images,
         "order": 3,
       },
-      'sporting': *[_id == 'sportingSection'][0]{
+      'learningSupport': *[_id == 'learningSupportSection'][0]{
         title,
         text,
         images,
         "order": 4,
       },
-      'cultural': *[_id == 'culturalSection'][0]{
+      'sporting': *[_id == 'sportingSection'][0]{
         title,
         text,
         images,
         "order": 5,
+      },
+      'cultural': *[_id == 'culturalSection'][0]{
+        title,
+        text,
+        images,
+        "order": 6,
       }
     }
   `)
