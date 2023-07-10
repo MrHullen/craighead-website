@@ -91,5 +91,10 @@
       width: 50%;
       padding: 2rem 2rem;
     }
+
+    a {
+      font-size: 1rem;
+      margin: 1rem auto;
+    }
   }
 </style>

@@ -138,6 +138,15 @@
       top: 5%;
     }
 
+    .welcome-card-items {
+      gap: 1rem;
+    }
+
+    .welcome-card-items-start,
+    .welcome-card-items-end {
+      width: 45%;
+    }
+
     figcaption {
       bottom: 10%;
       padding: 0.5rem 0;
