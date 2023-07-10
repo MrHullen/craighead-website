@@ -79,6 +79,11 @@
       width: 100%;
       padding: 2rem 1rem;
     }
+
+    a {
+      font-size: 1rem;
+      margin: 1rem auto;
+    }
   }
 
   /* tablet */
