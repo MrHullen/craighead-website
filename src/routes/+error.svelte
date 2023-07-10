@@ -6,9 +6,9 @@
   cdsSubdomainURL = cdsSubdomainURL.replace(/(^["']|["']$)/g, '')
 
   if (cdsSubdomainURL.startsWith("http://www") || cdsSubdomainURL.startsWith("http://craighead")) {
-    cdsSubdomainURL.replace("http://www", "http://cds")
+    cdsSubdomainURL = cdsSubdomainURL.replace("http://www", "http://cds")
   } else if (cdsSubdomainURL.startsWith("https://www") || cdsSubdomainURL.startsWith("https://craighead")) {
-    cdsSubdomainURL.replace("https://www", "https://cds")
+    cdsSubdomainURL = cdsSubdomainURL.replace("https://www", "https://cds")
   }
 </script>
 
@@ -59,7 +59,7 @@
     background-color: #fff;
     margin-top: 1rem;
   }
-  
+
   article {
     width: fit-content;
     max-width: 60%;
