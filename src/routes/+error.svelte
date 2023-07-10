@@ -5,10 +5,16 @@
   let cdsSubdomainURL = JSON.stringify($page.url)
   cdsSubdomainURL = cdsSubdomainURL.replace(/(^["']|["']$)/g, '')
 
-  if (cdsSubdomainURL.startsWith("http://www") || cdsSubdomainURL.startsWith("http://craighead")) {
+  if (cdsSubdomainURL.startsWith("http://www")) {
     cdsSubdomainURL = cdsSubdomainURL.replace("http://www", "http://cds")
-  } else if (cdsSubdomainURL.startsWith("https://www") || cdsSubdomainURL.startsWith("https://craighead")) {
+  } else if (cdsSubdomainURL.startsWith("https://www")) {
     cdsSubdomainURL = cdsSubdomainURL.replace("https://www", "https://cds")
+  }
+  
+  if (cdsSubdomainURL.startsWith("http://craighead")) {
+    cdsSubdomainURL = cdsSubdomainURL.replace("http://", "http://cds")
+  } else if (cdsSubdomainURL.startsWith("https://craighead")) {
+    cdsSubdomainURL = cdsSubdomainURL.replace("https://", "https://cds")
   }
 </script>
 
