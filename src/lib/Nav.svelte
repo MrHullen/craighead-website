@@ -77,6 +77,7 @@
           <div class="dropdown-menu">
             <div class="dropdown-content">
               <a class="dropdown-item" href="/our-school#school-structure">School Structure</a>
+              <a class="dropdown-item" href="/our-school#our-people">Our People</a>
               <a class="dropdown-item" href="/our-school#boarding">Boarding</a>
               <a class="dropdown-item" href="/our-school#learning-support">Learning Support</a>
               <a class="dropdown-item" href="/our-school#sports">Sports</a>
