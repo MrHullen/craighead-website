@@ -7,6 +7,11 @@
   import { onMount } from 'svelte'
   import { setContext } from 'svelte'
 
+  import { dev } from '$app/environment'
+  import { inject } from '@vercel/analytics'
+  
+  inject({ mode: dev ? 'development' : 'production' })
+
   const builder = imageUrlBuilder(client)
 
   function urlFor(source) {
