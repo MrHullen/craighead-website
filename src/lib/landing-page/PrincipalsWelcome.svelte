@@ -73,6 +73,8 @@
 
     img {
       width: 90%;
+      margin-bottom: -1rem;
+      z-index: 1;
     }
 
     figure {
