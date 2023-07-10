@@ -73,11 +73,18 @@
 
     img {
       width: 90%;
+      margin-bottom: -1rem;
+      z-index: 1;
     }
 
     figure {
       width: 100%;
       padding: 2rem 1rem;
+    }
+
+    a {
+      font-size: 1rem;
+      margin: 1rem auto;
     }
   }
 
