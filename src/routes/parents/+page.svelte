@@ -23,7 +23,7 @@
     justify-content: center;
   }
 
-  section article {
+  section a {
     min-width: fit-content;
     width: 30%;
     height: 6rem;
