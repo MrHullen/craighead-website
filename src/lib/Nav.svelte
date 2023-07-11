@@ -106,7 +106,7 @@
       <div class="navbar-item is-tab is-size-5">
         <div class="dropdown is-hoverable">
           <div class="dropdown-trigger">
-            <div class="has-text-dark pointer" href="#" on:click={toggle}> Parents </div>
+            <a class="has-text-dark" aria-current={$page.url.pathname.includes('/parents') ? 'page' : undefined} href="/parents" on:click={toggle}> Parents </a>
           </div>
           <div class="dropdown-menu">
             <div class="dropdown-content">
@@ -144,5 +144,11 @@
 
   .navbar-end:last-child {
     margin-right: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    .dropdown-menu {
+      display: none;
+    }
   }
 </style>
