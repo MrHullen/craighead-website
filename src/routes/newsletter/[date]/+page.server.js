@@ -1,11 +1,9 @@
 import client from '$lib/client'
 
 export async function load({ params }) {
-	const data = await client.fetch(groq`*[_type == "post" && slug.current == $slug][0]`, {
-    slug
-  })
+	const newsletter = await client.fetch(`*[_type == "newsletter" && releaseDate == '${params.date}'][0]`)
 
-	if (data) return data
+	if (newsletter) return { newsletter }
 
 	return {
     status: 500,

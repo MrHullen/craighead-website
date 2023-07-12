@@ -1,25 +1,13 @@
+import getNewsletters from '$lib/utils/sanity'
 import client from '$lib/client'
 
+
 export async function load({ params }) {
-  // const data = await client.fetch(
-	// 	groq`*[_type == "post" && defined(slug.current)] | order(_createdAt desc)`
-	// )
+  const newsletters = await client.fetch(`*[_type == "newsletter"] | order(releaseDate desc)`)
 
-  const data = [
-    {
-      "mainImage": "Main Image",
-      "title": "Title",
-      "slug": "Slug",
-      "slug.current": "slug.current",
-      "excerpt": "Excerpt",
-      "_createdAt": "Created at",
-      "body": "Body text"
-    }
-  ]
-
-	if (data) {
+	if (newsletters) {
 		return {
-			data
+			newsletters
 		}
 	}
 

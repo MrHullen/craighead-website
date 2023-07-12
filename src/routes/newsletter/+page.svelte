@@ -2,6 +2,7 @@
   import client from '$lib/client'
   import imageUrlBuilder from '@sanity/image-url'
   import { getContext } from 'svelte'
+  import Header from '$lib/subpages/Header.svelte'
 
   const builder = imageUrlBuilder(client)
 
@@ -14,22 +15,26 @@
 
   // new code
 
-  import Card from '$lib/newsletter/Card.svelte'
+
+  import NewsletterPreview from '$lib/newsletter/NewsletterPreview.svelte'
 </script>
 
 <svelte:head>
-  <title>Our School</title>
-  <meta name="description" content="Our beautiful campus, set within mature green spaces encompasses modern and traditional teaching facilities along with the finest boarding accommodation, Craighead provides a school where students can feel at home and supported in their pursuit of personal excellence." />
-  <meta property="og:title" content="Craighead Diocesan School - Our School" />
-  <meta property="og:url" content="https://craighead.school.nz/our-school" />
-  <meta property="og:description" content="Our beautiful campus, set within mature green spaces encompasses modern and traditional teaching facilities along with the finest boarding accommodation, Craighead provides a school where students can feel at home and supported in their pursuit of personal excellence." />
+  <title>Kōrero Newsletter</title>
+  <meta name="description" content="TODO." />
+  <meta property="og:title" content="Craighead Diocesan School - Kōrero Newsletter" />
+  <meta property="og:url" content="https://craighead.school.nz/korero-newsletter" />
+  <meta property="og:description" content="TODO." />
   <meta property="og:image" content={urlFor(logo).auto('format').bg('fff').url()} />
 </svelte:head>
 
-<section>
-	{#if data.length}
-		{#each data as post}
-			<Card {post} />
+<Header title="Kōrero Newsletters" subtitle="" />
+
+
+<section class="content section">
+	{#if data.newsletters.length}
+		{#each data.newsletters as newsletter}
+			<NewsletterPreview {newsletter} />
 		{/each}
 	{:else}
 		<p>Oops</p>
