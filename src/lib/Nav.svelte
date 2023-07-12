@@ -54,59 +54,49 @@
 
   <div class="navbar-menu" class:is-active={active}>
     <div class="navbar-end">
-      <div class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/enrolment')}>
-        <div class="dropdown is-hoverable">
-          <div class="dropdown-trigger">
-            <a class="has-text-dark" aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} href="/enrolment" on:click={toggle}> Enrolment </a>
-          </div>
-          <div class="dropdown-menu">
-            <div class="dropdown-content">
-              <a class="dropdown-item" href="/enrolment#a-girls'-school">A Girls' School</a>
-              <a class="dropdown-item" href="/enrolment#domestic">Domestic</a>
-              <a class="dropdown-item" href="/enrolment#international">International</a>
-            </div>
-          </div>
+      <div class="navbar-item is-size-5 has-dropdown is-hoverable">
+        <a class="navbar-link  is-arrowless has-text-dark" aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} href="/enrolment" on:click={toggle}> Enrolment </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" on:click={toggle} href="/enrolment#a-girls'-school">A Girls' School</a>
+          <a class="navbar-item" on:click={toggle} href="/enrolment#domestic">Domestic</a>
+          <a class="navbar-item" on:click={toggle} href="/enrolment#international">International</a>
         </div>
       </div>
 
-      <div class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/our-school')}>
-        <div class="dropdown is-hoverable">
-          <div class="dropdown-trigger">
-            <a class="has-text-dark" aria-current={$page.url.pathname.includes('/our-school') ? 'page' : undefined} href="/our-school" on:click={toggle}> Our School </a>
-          </div>
-          <div class="dropdown-menu">
-            <div class="dropdown-content">
-              <a class="dropdown-item" href="/our-school#school-structure">School Structure</a>
-              <a class="dropdown-item" href="/our-school#our-people">Our People</a>
-              <a class="dropdown-item" href="/our-school#boarding">Boarding</a>
-              <a class="dropdown-item" href="/our-school#learning-support">Learning Support</a>
-              <a class="dropdown-item" href="/our-school#sports">Sports</a>
-              <a class="dropdown-item" href="/our-school#culture-and-performing-arts">Cultural and Performing Arts</a>
-            </div>
-          </div>
+      <div class="navbar-item is-size-5 has-dropdown is-hoverable">
+        <a class="navbar-link  is-arrowless has-text-dark" aria-current={$page.url.pathname.includes('/our-school') ? 'page' : undefined} href="/our-school" on:click={toggle}> Our School </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" on:click={toggle} href="/our-school#school-structure">School Structure</a>
+          <a class="navbar-item" on:click={toggle} href="/our-school#our-people">Our People</a>
+          <a class="navbar-item" on:click={toggle} href="/our-school#boarding">Boarding</a>
+          <a class="navbar-item" on:click={toggle} href="/our-school#learning-support">Learning Support</a>
+          <a class="navbar-item" on:click={toggle} href="/our-school#sports">Sports</a>
+          <a class="navbar-item" on:click={toggle} href="/our-school#culture-and-performing-arts">Cultural and Performing Arts</a>
         </div>
       </div>
 
-      <div class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/about-us')}>
-        <div class="dropdown is-hoverable">
-          <div class="dropdown-trigger">
-            <a class="has-text-dark" aria-current={$page.url.pathname.includes('/about-us') ? 'page' : undefined} href="/about-us" on:click={toggle}> About Us </a>
-          </div>
-          <div class="dropdown-menu">
-            <div class="dropdown-content">
-              <a class="dropdown-item" href="/about-us#special-character">Special Character</a>
-              <a class="dropdown-item" href="/about-us#old-girls'-association">Old Girls' Association</a>
-              <a class="dropdown-item" href="/about-us#history">History</a>
-              <a class="dropdown-item" href="/about-us#facilities-hire">Facilities Hire</a>
-            </div>
-          </div>
+      <div class="navbar-item is-size-5 has-dropdown is-hoverable">
+        <a class="navbar-link is-arrowless has-text-dark" aria-current={$page.url.pathname.includes('/about-us') ? 'page' : undefined} href="/about-us" on:click={toggle}> About Us </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" on:click={toggle} href="/about-us#special-character">Special Character</a>
+          <a class="navbar-item" on:click={toggle} href="/about-us#old-girls'-association">Old Girls' Association</a>
+          <a class="navbar-item" on:click={toggle} href="/about-us#history">History</a>
+          <a class="navbar-item" on:click={toggle} href="/about-us#facilities-hire">Facilities Hire</a>
         </div>
       </div>
 
-      <div class="navbar-item is-tab is-size-5">
+      <div class="navbar-item is-size-5 has-dropdown is-hoverable">
+        <a class="navbar-link is-arrowless has-text-dark is-tab" aria-current={$page.url.pathname.includes('/parents') ? 'page' : undefined} href="/parents" on:click={toggle}> Parents </a>
+        <div class="navbar-dropdown">
+          {#each content.usefulLinks as usefulLink}
+            <a class="navbar-item" on:click={toggle} href="{usefulLink.link}">{usefulLink.title}</a>
+          {/each}
+        </div>
+      </div>
+      <!-- <div class="navbar-item is-tab is-size-5">
         <div class="dropdown is-hoverable">
           <div class="dropdown-trigger">
-            <div class="has-text-dark pointer" href="#" on:click={toggle}> Parents </div>
+            <a class="has-text-dark" aria-current={$page.url.pathname.includes('/parents') ? 'page' : undefined} href="/parents" on:click={toggle}> Parents </a>
           </div>
           <div class="dropdown-menu">
             <div class="dropdown-content">
@@ -116,7 +106,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- <a class="navbar-item is-tab is-size-5" class:is-active={$page.url.pathname.includes('/enrolment')} aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} href="/enrolment" on:click={toggle}> Enrolment </a>
 
@@ -136,10 +126,6 @@
 <style>
   .burger {
     height: 6rem;
-  }
-
-  .pointer {
-    cursor: pointer;
   }
 
   .navbar-end:last-child {
