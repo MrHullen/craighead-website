@@ -54,6 +54,8 @@
 
   <div class="navbar-menu" class:is-active={active}>
     <div class="navbar-end">
+      <a class="navbar-item is-size-5" on:click={toggle} href="https://cds.craighead.school.nz/2024-principal-recruitment/">Principal Recruitment</a>
+
       <div class="navbar-item is-size-5 has-dropdown is-hoverable">
         <a class="navbar-link  is-arrowless has-text-dark" aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} href="/enrolment" on:click={toggle}> Enrolment </a>
         <div class="navbar-dropdown">
