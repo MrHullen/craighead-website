@@ -28,3 +28,19 @@
     {/each} -->
   </div>
 </article>
+
+<style>
+  /* mobile */
+  @media (max-width: 700px) {
+    article.media {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    article.media figure.media-left {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+</style>

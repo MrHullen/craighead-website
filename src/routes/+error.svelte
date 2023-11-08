@@ -36,11 +36,17 @@
       <p>
         We are currently in a transition period with our website. Some content has been moved to a new address and links that previously work might need to be updated. If the link you used previously worked, try this one:
       </p>
-      <a class="button is-success" href="{cdsSubdomainURL}">{cdsSubdomainURL}</a>
+      <a class="button is-success" href="{cdsSubdomainURL}">
+        {cdsSubdomainURL}
+        <!-- <img class="icon" src="/go.svg" alt="Leaving page icon" /> -->
+      </a>
       <p>
         Or, you can go back to our home page:
       </p>
-      <a class="button is-success" href="/">Home</a>
+      <a class="button is-success" href="/">
+        <!-- <img class="icon" src="/home.svg" alt="Home icon" /> -->
+        Home
+      </a>
     </div>
   </article>
   
@@ -66,9 +72,8 @@
     margin-top: 1rem;
   }
 
-  article {
+  article.message.is-info {
     width: fit-content;
-    max-width: 60%;
     margin: auto auto;
   }
 

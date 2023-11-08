@@ -1,22 +1,11 @@
 <script>
-  import client from '$lib/client'
-  import imageUrlBuilder from '@sanity/image-url'
   import { getContext } from 'svelte'
   import Header from '$lib/subpages/Header.svelte'
-
-  const builder = imageUrlBuilder(client)
-
-  function urlFor(source) {
-    return builder.image(source)
-  }
+  import { urlFor } from '$lib/utils/image'
+  import NewsletterPreview from '$lib/newsletter/NewsletterPreview.svelte'
 
   export let data
   let logo = getContext('logo')
-
-  // new code
-
-
-  import NewsletterPreview from '$lib/newsletter/NewsletterPreview.svelte'
 </script>
 
 <svelte:head>
