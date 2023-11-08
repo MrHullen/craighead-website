@@ -1,16 +1,11 @@
 <script>
   import InfoPage from '$lib/subpages/InfoPage.svelte'
-  import client from '$lib/client'
-  import imageUrlBuilder from '@sanity/image-url'
-  import { getContext } from 'svelte'
-
-  const builder = imageUrlBuilder(client)
-
-  function urlFor(source) {
-    return builder.image(source)
-  }
+  import { urlFor } from '$lib/utils/image'
 
   export let data
+
+  // get the favicon
+  import { getContext } from 'svelte'
   let logo = getContext('logo')
 </script>
 

@@ -4,16 +4,10 @@
   import { onMount } from 'svelte'
   import js from 'jquery'
 
-  import client from '$lib/client'
-  import imageUrlBuilder from '@sanity/image-url'
+  import { urlFor } from '$lib/utils/image'
+
+  // get the favicon
   import { getContext } from 'svelte'
-
-  const builder = imageUrlBuilder(client)
-
-  function urlFor(source) {
-    return builder.image(source)
-  }
-
   let logo = getContext('logo')
 
   onMount(() => {

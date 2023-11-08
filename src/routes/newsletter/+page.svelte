@@ -1,7 +1,7 @@
 <script>
+  import { urlFor } from '$lib/utils/image'
   import { getContext } from 'svelte'
   import Header from '$lib/subpages/Header.svelte'
-  import { urlFor } from '$lib/utils/image'
   import NewsletterPreview from '$lib/newsletter/NewsletterPreview.svelte'
 
   export let data
