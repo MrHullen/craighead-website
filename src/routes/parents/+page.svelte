@@ -1,8 +1,22 @@
 <script>
   import Header from '$lib/subpages/Header.svelte'
   import footer from '$lib/footer'
+  import { urlFor } from '$lib/utils/image'
   const content = $footer 
+
+  // get the favicon
+  import { getContext } from 'svelte'
+  let logo = getContext('logo')
 </script>
+
+<svelte:head>
+  <title>Parents</title>
+  <meta name="description" content="Pages and resources for parents of current students." />
+  <meta property="og:title" content="Craighead Diocesan School - Parents" />
+  <meta property="og:url" content="https://craighead.school.nz/parents" />
+  <meta property="og:description" content="Pages and resources for parents of current students." />
+  <meta property="og:image" content={urlFor(logo).auto('format').bg('fff').url()} />
+</svelte:head>
 
 <Header title="Parents" subtitle="Links for parents of current students." />
 
