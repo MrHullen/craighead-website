@@ -17,6 +17,7 @@
 	{#if data.newsletters.length}
 		{#each data.newsletters as newsletter}
 			<NewsletterPreview {newsletter} />
+      <hr />
 		{/each}
 	{:else}
 		<p>Oops</p>
