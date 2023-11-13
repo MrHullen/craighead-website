@@ -1,14 +1,10 @@
 <script>
+  import Head from '$lib/Head.svelte'
   import Header from '$lib/subpages/Header.svelte'
 
   import { onMount } from 'svelte'
   import js from 'jquery'
 
-  import { urlFor } from '$lib/utils/image'
-
-  // get the favicon
-  import { getContext } from 'svelte'
-  let logo = getContext('logo')
 
   onMount(() => {
     window.jQuery = js
@@ -58,14 +54,10 @@
   })
 </script>
 
-<svelte:head>
-  <title>Apply</title>
-  <meta name="description" content="Entry to the school is not based on academic ability. We enjoy diversity and helping every student to discover her capabilities. There are no assumptions, no limitations. In the Craighead environment, students have the capacity to excel." />
-  <meta property="og:title" content="Craighead Diocesan School - Apply" />
-  <meta property="og:url" content="https://craighead.school.nz/apply" />
-  <meta property="og:description" content="Entry to the school is not based on academic ability. We enjoy diversity and helping every student to discover her capabilities. There are no assumptions, no limitations. In the Craighead environment, students have the capacity to excel." />
-  <meta property="og:image" content={urlFor(logo).auto('format').bg('fff').url()} />
-</svelte:head>
+<Head
+  title="Apply"
+  description="Entry to the school is not based on academic ability. We enjoy diversity and helping every student to discover her capabilities. There are no assumptions, no limitations. In the Craighead environment, students have the capacity to excel."
+  />
 
 <Header title="Apply" subtitle="Use our online form to apply to join our wonderful community." />
 

@@ -1,4 +1,5 @@
 <script>
+  import Head from '$lib/Head.svelte'
   import Header from '$lib/subpages/Header.svelte'
   import footer from '$lib/footer'
   import { urlFor } from '$lib/utils/image'
@@ -17,6 +18,11 @@
   <meta property="og:description" content="Pages and resources for parents of current students." />
   <meta property="og:image" content={urlFor(logo).auto('format').bg('fff').url()} />
 </svelte:head>
+
+<Head
+  title=""
+  description=""
+  />
 
 <Header title="Parents" subtitle="Links for parents of current students." />
 

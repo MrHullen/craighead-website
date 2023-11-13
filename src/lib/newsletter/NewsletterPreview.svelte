@@ -2,11 +2,11 @@
 	import { formatDate } from '$lib/utils/formatDate'
 	import { urlFor } from '$lib/utils/image'
   import { PortableText } from '@portabletext/svelte'
-  import ArticlePreview from '$lib/newsletter/ArticlePreview.svelte'
 
 	export let newsletter
 </script>
 
+<a class="wrapper-link" href="/newsletter/{newsletter.releaseDate}">
 <article class="media">
   <figure class="media-left">
     <img
@@ -23,13 +23,15 @@
       </p>
     </div>
     <a href="/newsletter/{newsletter.releaseDate}">Read more...</a>
-    <!-- {#each newsletter.articles as article}
-      <ArticlePreview releaseDate={newsletter.releaseDate} {article} />
-    {/each} -->
   </div>
 </article>
+</a>
 
 <style>
+  .wrapper-link {
+    color: inherit;
+  }
+
   /* mobile */
   @media (max-width: 700px) {
     article.media {

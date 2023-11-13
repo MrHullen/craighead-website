@@ -1,26 +1,19 @@
 <script>
-  import { urlFor } from '$lib/utils/image'
-  import { getContext } from 'svelte'
+  import Head from '$lib/Head.svelte'
   import Header from '$lib/subpages/Header.svelte'
   import NewsletterPreview from '$lib/newsletter/NewsletterPreview.svelte'
 
   export let data
-  let logo = getContext('logo')
 </script>
 
-<svelte:head>
-  <title>Kōrero Newsletter</title>
-  <meta name="description" content="TODO." />
-  <meta property="og:title" content="Craighead Diocesan School - Kōrero Newsletter" />
-  <meta property="og:url" content="https://craighead.school.nz/korero-newsletter" />
-  <meta property="og:description" content="TODO." />
-  <meta property="og:image" content={urlFor(logo).auto('format').bg('fff').url()} />
-</svelte:head>
+<Head
+  title="Kōrero"
+  description=" is Craighead's weekly newsletter. The Principal includes a short messages about what's going on, key dates and notices are posted, and there are articles about events and student achievements."
+  />
 
-<Header title="Kōrero Newsletters" subtitle="" />
+<Header title="Kōrero" subtitle="Craighead's Weekly Newsletter" />
 
-
-<section class="content section">
+<main class="content section has-background-white">
 	{#if data.newsletters.length}
 		{#each data.newsletters as newsletter}
 			<NewsletterPreview {newsletter} />
@@ -28,10 +21,4 @@
 	{:else}
 		<p>Oops</p>
 	{/if}
-</section>
-
-<style>
-  section {
-    background-color: #fff;
-  }
-</style>
+</main>

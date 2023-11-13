@@ -1,9 +1,9 @@
 <script>
-	import { PortableText } from '@portabletext/svelte'
-	import { urlFor } from '$lib/utils/image'
+  import Head from '$lib/Head.svelte'
   import Header from '$lib/subpages/Header.svelte'
   import ImageModal from '$lib/subpages/ImageModal.svelte'
   import Paragraph from '$lib/subpages/Paragraph.svelte'
+	import { urlFor } from '$lib/utils/image'
 
 	export let data
   const article = data.article[0]
@@ -17,11 +17,16 @@
   }
 </script>
 
+<Head
+  title="Kōrero"
+  description="Kōrero is Craighead's weekly newsletter. The Principal includes a short messages about what's going on, key dates and notices are posted, and there are articles about events and student achievements."
+  />
+
 <Header title="{article.title}" subtitle="" />
 
 <ImageModal bind:isActive bind:modalImage />
 
-<section class="content section">
+<main class="content section has-background-white">
   <img
     src={urlFor(article.mainImage).width(300).height(150).url()}
     alt="Feature image for {article.title}"
@@ -46,13 +51,9 @@
       {/each}
     {/if}
   </div>
-</section>
+</main>
 
 <style>
-  section {
-    background-color: #fff;
-  }
-
   img {
     display: block;
     margin: 1rem auto;
