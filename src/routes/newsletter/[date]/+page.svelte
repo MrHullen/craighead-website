@@ -39,6 +39,7 @@
   {#if data.newsletter?.articles?.length}
     {#each data.newsletter?.articles as article}
       <ArticlePreview {article} />
+      <hr />
     {/each}
   {:else}
     <p>Oops, looks like there was a problem loading the data! Try returning <a href="/">home</a>.</p>
