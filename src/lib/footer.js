@@ -7,7 +7,7 @@ export default writable({
   emailAddress: `admin@craighead.school.nz`,
   usefulLinks: [
     { title: `Calendar & Term Dates`, link: `https://cds.craighead.school.nz/calendar/` },
-    { title: `Kōrero Newsletter`, link: `https://craighead.school.nz/newsletter/` },
+    { title: `Kōrero`, link: `https://craighead.school.nz/korero/` },
     { title: `CraigNet - Parent & Student Info Portal`, link: `https://cds.craighead.school.nz/craignet/` },
     { title: `KAMAR Student/Parent Portal`, link: `https://portal.craighead.school.nz/index.php` },
     { title: `Craighead Sports Portal`, link: `https://www.sporty.co.nz/craighead` },

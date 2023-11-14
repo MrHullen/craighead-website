@@ -11,7 +11,7 @@
   description=" is Craighead's weekly newsletter. The Principal includes a short messages about what's going on, key dates and notices are posted, and there are articles about events and student achievements."
   />
 
-<Header title="Kōrero" subtitle="Craighead's Weekly Newsletter" />
+<Header title="Craighead Kōrero" subtitle="Craighead's Weekly Newsletter" />
 
 <main class="content section has-background-white">
 	{#if data.newsletters.length}
