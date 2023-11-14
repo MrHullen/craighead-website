@@ -5,23 +5,7 @@
   export let article
 </script>
 
-<!-- <article class="media">
-  <figure class="media-left">
-    <img src={urlFor(article.mainImage).width(200).height(100).url()} alt="Feature image for {article.title}" />
-  </figure>
-  <div class="media-content">
-    <div class="content">
-      <p>
-        <strong>{article.title}</strong>
-        <br />
-        {article.excerpt}
-      </p>
-    </div>
-    <a href="/newsletter/{$page.params.date}/{article.slug.current}">Read more...</a>
-  </div>
-</article> -->
-
-<a class="wrapper-link section" href="/newsletter/{$page.params.date}/{article.slug.current}">
+<a class="wrapper-link section" href="/korero/{$page.params.date}/{article.slug.current}">
   <article>
     <h3 class="k-heading">{article.title}</h3>
     <img
@@ -33,26 +17,10 @@
       <p>
         {article.excerpt}
       </p>
-      <a href="/newsletter/{$page.params.date}/{article.slug.current}">Read more...</a>
+      <a href="/korero/{$page.params.date}/{article.slug.current}">Read more...</a>
     </div>
   </article>
 </a>
-
-<!-- <style>
-  /* mobile */
-  @media (max-width: 700px) {
-    article.media {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-    }
-
-    article.media figure.media-left {
-      margin-left: 0;
-      margin-bottom: 0;
-    }
-  }
-</style> -->
 
 <style>
   h3.k-heading {

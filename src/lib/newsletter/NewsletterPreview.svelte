@@ -6,28 +6,7 @@
 	export let newsletter
 </script>
 
-<!-- <a class="wrapper-link" href="/newsletter/{newsletter.releaseDate}">
-<article class="media">
-  <figure class="media-left">
-    <img
-      src={urlFor(newsletter.featureImage).width(300).height(150).url()}
-      alt="Feature image for {newsletter.title}"
-    />
-  </figure>
-  <div class="media-content">
-    <div class="content">
-      <p>
-        <strong>Kōrero Newsletter for {formatDate(newsletter.releaseDate)}</strong>
-        <br>
-        <PortableText value={newsletter.featureText} />
-      </p>
-    </div>
-    <a href="/newsletter/{newsletter.releaseDate}">Read more...</a>
-  </div>
-</article>
-</a> -->
-
-<a class="wrapper-link section" href="/newsletter/{newsletter.releaseDate}">
+<a class="wrapper-link section" href="/korero/{newsletter.releaseDate}">
   <article>
     <h3 class="k-heading">Kōrero for {formatDate(newsletter.releaseDate)}</h3>
     <img
@@ -39,7 +18,7 @@
       <span>
         <PortableText value={newsletter.featureText} />
       </span>
-      <a href="/newsletter/{newsletter.releaseDate}">Read more...</a>
+      <a href="/korero/{newsletter.releaseDate}">Read more...</a>
     </p>
   </article>
 </a>
