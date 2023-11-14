@@ -1,9 +1,8 @@
 <script>
+  import '../app.scss'
   import Nav from '$lib/Nav.svelte'
   import Footer from '$lib/Footer.svelte'
-  import '../app.scss'
-  import client from '$lib/client'
-  import imageUrlBuilder from '@sanity/image-url'
+  import { urlFor } from '$lib/utils/image'
   import { onMount } from 'svelte'
   import { setContext } from 'svelte'
 
@@ -11,12 +10,6 @@
   import { inject } from '@vercel/analytics'
   
   inject({ mode: dev ? 'development' : 'production' })
-
-  const builder = imageUrlBuilder(client)
-
-  function urlFor(source) {
-    return builder.image(source)
-  }
 
   export let data
 

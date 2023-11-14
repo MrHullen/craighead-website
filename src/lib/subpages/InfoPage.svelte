@@ -4,16 +4,9 @@
   import BackToTop from '$lib/subpages/BackToTop.svelte'
   import ImageModal from '$lib/subpages/ImageModal.svelte'
   import { PortableText } from '@portabletext/svelte'
-  import client from '$lib/client'
-  import imageUrlBuilder from '@sanity/image-url'
+  import { urlFor } from '$lib/utils/image'
 
   export let content
-
-  const builder = imageUrlBuilder(client)
-
-  function urlFor(source) {
-    return builder.image(source)
-  }
 
   // gets all the objects apart from the header and adds them to an array so that #each can iterate over it, then sorts it into the order defined in the retrieval query (+page.server.js).
   const sections = Object.values((({ header, ...o }) => o)(content))

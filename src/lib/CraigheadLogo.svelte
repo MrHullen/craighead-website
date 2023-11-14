@@ -33,7 +33,6 @@
   }
 
   .is-brand {
-    font-family: 'Abhaya Libre', serif;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
