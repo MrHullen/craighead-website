@@ -5,7 +5,6 @@ export async function load({ params }) {
     *[_id == 'general'][0]{
       favIcon,
       logo,
-      backgroundImage,
       'application': application.asset->url
     }
   `)
