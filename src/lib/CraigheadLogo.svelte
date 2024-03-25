@@ -25,8 +25,17 @@
     src: url('/AngleciaProDisplay-Regular.otf') format('opentype');
   }
 
+  @font-face {
+    font-family: 'Maleah-Light';
+    src: url('/Maleah-Light.ttf') format('truetype');
+  }
+  /* @font-face {
+    font-family: 'Maleah';
+    src: url('/Maleah.ttf') format('truetype');
+  } */
+
   span {
-    font-family: 'Anglecia Pro Display', sans-serif;
+    font-family: 'Maleah-Light', sans-serif;
     color: #003F2C;
   }
 
@@ -45,11 +54,11 @@
   }
 
   .is-brand-top {
-    margin-bottom: -0.6rem;
+    margin-bottom: -0.5rem;
   }
 
   .is-brand-bottom {
-    margin-top: 0.2rem;
+    margin-top: 0rem;
     font-size: 1.1rem;
   }
 
