@@ -99,4 +99,8 @@
   .navbar-end:last-child {
     margin-right: 2rem;
   }
+
+  nav .is-success {
+    background-color: #003f2c;
+  }
 </style>
