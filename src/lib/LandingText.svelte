@@ -8,7 +8,8 @@
   p.hero-text {
     font-size: 3em;
     width: 70%;
-    margin: 1em auto;
+    margin: 0 auto;
+    margin-bottom: 1em;
     text-align: center;
   }
 

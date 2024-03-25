@@ -7,7 +7,7 @@
 </script>
 
 <a href={link}>
-  <img src="{urlFor(data).width(300).height(200).url()}" alt="{data.caption}" />
+  <img src="{urlFor(data).width(400).height(300).url()}" alt="{data.caption}" />
   <span>
     <h3>{title}</h3>
   </span>
@@ -16,7 +16,7 @@
 <style>
   a { 
     position: relative;
-    height: 200px;
+    height: 300px;
   }
 
   span {
@@ -29,5 +29,11 @@
   
   h3 {
     margin: 0.5em 1em; 
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 </style>

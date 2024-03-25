@@ -13,5 +13,7 @@
 <style>
   mux-video {
     width: 100%;
+    height: 50%;
+    object-fit: cover;
   }
 </style>

@@ -27,30 +27,35 @@
 </main>
 
 <style>
+  main {
+    --main-gap-size-desktop: 7em;
+    --main-gap-size-mobile: 3em;
+  }
+
   section.text {
-    margin-top: 10em;
-    margin-bottom: 15em;
+    margin-top: var(--main-gap-size-desktop);
+    margin-bottom: var(--main-gap-size-desktop);
   }
 
   section.tiles {
-    margin: 5em auto;
+    margin: 0 auto;
+    margin-bottom: var(--main-gap-size-desktop);
     width: fit-content;
     display: grid;
     gap: 3em;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
-    margin-bottom: 15em;
   }
 
   @media screen and (max-width: 1000px) {
     section.tiles {
       display: flex;
       flex-direction: column;
-      margin-bottom: 5em;
+      margin-bottom: var(--main-gap-size-mobile);
     }
 
     section.text {
-      margin-top: 3em;
-      margin-bottom: 5em;
-    }
+    margin-top: var(--main-gap-size-mobile);
+    margin-bottom: var(--main-gap-size-mobile);
+  }
   }
 </style>
