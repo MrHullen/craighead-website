@@ -1,38 +1,61 @@
 <script>
   import Head from '$lib/Head.svelte'
-  import StudentsWelcome from '$lib/landing-page/StudentsWelcome.svelte'
-  import PrincipalsWelcome from '$lib/landing-page/PrincipalsWelcome.svelte'
-  import StudentSpotlights from '$lib/landing-page/StudentSpotlights.svelte'
-  import AcademicResults from '$lib/landing-page/AcademicResults.svelte'
-
+  import Video from '$lib/Video.svelte'
+  import Tile from '$lib/Tile.svelte'
+  import LandingText from '$lib/LandingText.svelte'
 
   export let data
 </script>
 
-<Head
-  title="Craighead Diocesan School"
-  description="Craighead Diocesan School has a reputation for lifting the performance of our students - in all activities, both in and out of the classroom. We believe many students have unrealized potential and we enjoy helping each girl discover her capabilities."
-  />
+<Head title="Craighead Diocesan School" description="Craighead Diocesan School has a reputation for lifting the performance of our students - in all activities, both in and out of the classroom. We believe many students have unrealized potential and we enjoy helping each girl discover her capabilities." />
 
 <main>
-  <StudentsWelcome content={data.content.studentWelcome} />
+  <Video playbackId={data.landingVideo.playbackId} />
 
-  <PrincipalsWelcome content={data.content.principalsWelcome} />
+  <section class="text">
+    <LandingText />
+  </section>
 
-  <StudentSpotlights content={data.content.studentSpotlights} />
-
-  <AcademicResults />
+  <section class="tiles">
+    <Tile title="Teaching and Learning" link="/our-school" data={data.tileImages.teachingLearning} />
+    <Tile title="Special Character" link="/about-us#special-character" data={data.tileImages.specialCharacter} />
+    <Tile title="Boarding" link="/our-school#boarding" data={data.tileImages.boarding} />
+    <Tile title="Wellbeing" link="/our-school#learning-support" data={data.tileImages.wellbeing} />
+    <Tile title="Co-curricular" link="/our-school#sports" data={data.tileImages.coCurricular} />
+    <Tile title="International" link="/enrolment#international" data={data.tileImages.international} />
+  </section>
 </main>
 
 <style>
   main {
-    height: 100%;
-    margin: 0 0;
-    padding: 0 0;
-    display: flex;
-    flex-direction: column;
-    margin-top: 5vh;
-    gap: 10vh;
-    margin-bottom: 5vh;
+    --main-gap-size-desktop: 7em;
+    --main-gap-size-mobile: 3em;
+  }
+
+  section.text {
+    margin-top: var(--main-gap-size-desktop);
+    margin-bottom: var(--main-gap-size-desktop);
+  }
+
+  section.tiles {
+    margin: 0 auto;
+    margin-bottom: var(--main-gap-size-desktop);
+    width: fit-content;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+
+  @media screen and (max-width: 1000px) {
+    section.tiles {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: var(--main-gap-size-mobile);
+    }
+
+    section.text {
+    margin-top: var(--main-gap-size-mobile);
+    margin-bottom: var(--main-gap-size-mobile);
+  }
   }
 </style>

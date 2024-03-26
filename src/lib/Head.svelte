@@ -16,6 +16,7 @@
 
 <svelte:head>
   <title>{title}</title>
+  <link rel="icon" type="image/x-icon" href="/crest-icon.png">
   <meta name="description" content={description} />
   <meta property="og:title" content="Craighead Diocesan School - {title}" />
   <meta property="og:url" content={url} />

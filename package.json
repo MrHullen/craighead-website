@@ -25,6 +25,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@mux/mux-player": "^2.3.3",
     "@sanity/image-url": "^1.0.1"
   }
 }
