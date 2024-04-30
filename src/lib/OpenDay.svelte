@@ -3,7 +3,7 @@
   <div>
     <h2>Open Day</h2>
     <h3>19 May 2024 - 2pm start</h3>
-    <p>Our campus will be open for prospective studens and parents to view from 2pm. All visitors are invited to the Turley Auditorium at 2pm. Groups will be given a guided tour by our senior students. Those that wish to view the Boarding House will need to book a tour using the form linked below.</p>
+    <p>Our campus will be open for prospective students and parents to view from 2pm. All visitors are invited to the Turley Auditorium at 2pm. Groups will be given a guided tour by our senior students. Those that wish to view the Boarding House will need to book a tour using the form linked below.</p>
     <a href="https://cds.craighead.school.nz/register-for-an-event/" class="button is-success is-rounded has-text-weight-bold is-inverted">Book a Boarding House Tour</a>
   </div>
 </section>
