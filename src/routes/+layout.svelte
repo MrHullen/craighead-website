@@ -44,4 +44,9 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  /* fixes scroll margin for anchor links */
+  :global(*) {
+    scroll-margin-top: 100px;
+  }
 </style>

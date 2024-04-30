@@ -3,6 +3,7 @@
   import Video from '$lib/Video.svelte'
   import Tile from '$lib/Tile.svelte'
   import LandingText from '$lib/LandingText.svelte'
+  import OpenDay from '$lib/OpenDay.svelte'
 
   export let data
 </script>
@@ -11,6 +12,8 @@
 
 <main>
   <Video playbackId={data.landingVideo.playbackId} />
+
+  <OpenDay />
 
   <section class="text">
     <LandingText />
@@ -54,8 +57,8 @@
     }
 
     section.text {
-    margin-top: var(--main-gap-size-mobile);
-    margin-bottom: var(--main-gap-size-mobile);
-  }
+      margin-top: var(--main-gap-size-mobile);
+      margin-bottom: var(--main-gap-size-mobile);
+    }
   }
 </style>
