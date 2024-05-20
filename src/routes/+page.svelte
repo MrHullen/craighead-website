@@ -3,7 +3,7 @@
   import Video from '$lib/Video.svelte'
   import Tile from '$lib/Tile.svelte'
   import LandingText from '$lib/LandingText.svelte'
-  import OpenDay from '$lib/OpenDay.svelte'
+  // import OpenDay from '$lib/OpenDay.svelte'
 
   export let data
 </script>
@@ -13,7 +13,7 @@
 <main>
   <Video playbackId={data.landingVideo.playbackId} />
 
-  <OpenDay />
+  <!-- <OpenDay /> -->
 
   <section class="text">
     <LandingText />

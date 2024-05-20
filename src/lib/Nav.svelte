@@ -47,9 +47,12 @@
 
   <div class="navbar-menu" class:is-active={active}>
     <div class="navbar-end">
-      <a class="navbar-item is-size-5" href="/#open-day" on:click={toggle}>
+
+      <!-- <!-- OPEN DAY -->
+      <!-- <a class="navbar-item is-size-5" href="/#open-day" on:click={toggle}>
         <span class="button is-success is-rounded has-text-weight-bold"> Open Day </span>
-      </a>
+      </a> -->
+      
       <div class="navbar-item is-size-5 has-dropdown is-hoverable">
         <a class="navbar-link  is-arrowless has-text-dark" aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} class:is-active={$page.url.pathname.includes('/enrolment')} href="/enrolment" on:click={toggle}> Enrolment </a>
         <div class="navbar-dropdown">
