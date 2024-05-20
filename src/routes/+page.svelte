@@ -3,7 +3,7 @@
   import Video from '$lib/Video.svelte'
   import Tile from '$lib/Tile.svelte'
   import LandingText from '$lib/LandingText.svelte'
-  import OpenDay from '$lib/OpenDay.svelte'
+  // import OpenDay from '$lib/OpenDay.svelte'
 
   export let data
 </script>
@@ -13,7 +13,7 @@
 <main>
   <Video playbackId={data.landingVideo.playbackId} />
 
-  <OpenDay />
+  <!-- <OpenDay /> -->
 
   <section class="text">
     <LandingText />
@@ -41,12 +41,12 @@
   }
 
   section.tiles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 3em;
     margin: 0 auto;
     margin-bottom: var(--main-gap-size-desktop);
     width: fit-content;
-    display: grid;
-    gap: 3em;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
   }
 
   @media screen and (max-width: 1000px) {

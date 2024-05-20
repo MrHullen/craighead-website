@@ -42,42 +42,43 @@
       <span aria-hidden="true" />
       <span aria-hidden="true" />
     </a>
-  </div>
-  <!-- navbar-brand -->
+  </div> <!-- navbar-brand -->
 
   <div class="navbar-menu" class:is-active={active}>
     <div class="navbar-end">
-      <a class="navbar-item is-size-5" href="/#open-day" on:click={toggle}>
+
+      <!-- OPEN DAY BUTTON -->
+      <!-- <a class="navbar-item is-size-5" href="/#open-day" on:click={toggle}>
         <span class="button is-success is-rounded has-text-weight-bold"> Open Day </span>
-      </a>
+      </a> -->
       <div class="navbar-item is-size-5 has-dropdown is-hoverable">
         <a class="navbar-link  is-arrowless has-text-dark" aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} class:is-active={$page.url.pathname.includes('/enrolment')} href="/enrolment" on:click={toggle}> Enrolment </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" on:click={toggle} href="/enrolment#a-girls'-school">A Girls' School</a>
           <a class="navbar-item" on:click={toggle} href="/enrolment#domestic">Domestic</a>
           <a class="navbar-item" on:click={toggle} href="/enrolment#international">International</a>
         </div>
       </div>
-
+      
       <div class="navbar-item is-size-5 has-dropdown is-hoverable">
         <a class="navbar-link  is-arrowless has-text-dark" aria-current={$page.url.pathname.includes('/our-school') ? 'page' : undefined} class:is-active={$page.url.pathname.includes('/our-school')} href="/our-school" on:click={toggle}> Our School </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" on:click={toggle} href="/our-school#school-structure">School Structure</a>
-          <a class="navbar-item" on:click={toggle} href="/our-school#our-people">Our People</a>
-          <a class="navbar-item" on:click={toggle} href="/our-school#boarding">Boarding</a>
-          <a class="navbar-item" on:click={toggle} href="/our-school#learning-support">Learning Support</a>
-          <a class="navbar-item" on:click={toggle} href="/our-school#sports">Sports</a>
-          <a class="navbar-item" on:click={toggle} href="/our-school#culture-and-performing-arts">Cultural and Performing Arts</a>
+          <a class="navbar-item" on:click={toggle} href="/our-school/teaching-and-learning">Teaching and Learning</a>
+          <a class="navbar-item" on:click={toggle} href="/our-school/special-character">Special Character</a>
+          <a class="navbar-item" on:click={toggle} href="/our-school/boarding">Boarding</a>
+          <a class="navbar-item" on:click={toggle} href="/our-school/wellbeing">Wellbeing</a>
+          <a class="navbar-item" on:click={toggle} href="/our-school/co-curricular">Co-curricular</a>
         </div>
       </div>
-
+      
       <div class="navbar-item is-size-5 has-dropdown is-hoverable">
         <a class="navbar-link is-arrowless has-text-dark" aria-current={$page.url.pathname.includes('/about-us') ? 'page' : undefined} class:is-active={$page.url.pathname.includes('/about-us')} href="/about-us" on:click={toggle}> About Us </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" on:click={toggle} href="/about-us#special-character">Special Character</a>
-          <a class="navbar-item" on:click={toggle} href="/about-us#old-girls'-association">Old Girls' Association</a>
-          <a class="navbar-item" on:click={toggle} href="/about-us#history">History</a>
-          <a class="navbar-item" on:click={toggle} href="/about-us#facilities-hire">Facilities Hire</a>
+          <a class="navbar-item" on:click={toggle} href="/about-us/a-girls'-school">A Girls' School</a>
+          <a class="navbar-item" on:click={toggle} href="/about-us/history">History</a>
+          <a class="navbar-item" on:click={toggle} href="/about-us/old-girls'-association">Old Girls' Association</a>
+          <a class="navbar-item" on:click={toggle} href="/about-us/our-people">Our People</a>
+          <a class="navbar-item" on:click={toggle} href="/about-us/development">Development</a>
+          <a class="navbar-item" on:click={toggle} href="/about-us/uniform">Uniform</a>
         </div>
       </div>
 
@@ -93,10 +94,8 @@
       <a class="navbar-item is-size-5" class:is-active={$page.url.pathname.includes('/apply')} aria-current={$page.url.pathname.includes('/apply') ? 'page' : undefined} href="/apply" on:click={toggle}>
         <span class="button is-success is-rounded has-text-weight-bold"> Apply Now </span>
       </a>
-    </div>
-    <!-- navbar-end -->
-  </div>
-  <!-- navbar-menu -->
+    </div> <!-- navbar-end -->
+  </div> <!-- navbar-menu -->
 </nav>
 
 <style>
