@@ -6,6 +6,11 @@
   import footer from '$lib/footer'
   const content = $footer
 
+  function scrollTo(element) {
+    if (!document.getElementById(element) || !document.getElementById(element)) return
+    document.getElementById(element).scrollIntoView({ behavior: 'smooth' })
+  }
+
   export let logo
 
   // Boolean value for burger menu on mobile
@@ -42,6 +47,12 @@
 
   <div class="navbar-menu" class:is-active={active}>
     <div class="navbar-end">
+
+      <!-- <!-- OPEN DAY -->
+      <!-- <a class="navbar-item is-size-5" href="/#open-day" on:click={toggle}>
+        <span class="button is-success is-rounded has-text-weight-bold"> Open Day </span>
+      </a> -->
+      
       <div class="navbar-item is-size-5 has-dropdown is-hoverable">
         <a class="navbar-link  is-arrowless has-text-dark" aria-current={$page.url.pathname.includes('/enrolment') ? 'page' : undefined} class:is-active={$page.url.pathname.includes('/enrolment')} href="/enrolment" on:click={toggle}> Enrolment </a>
         <div class="navbar-dropdown">
@@ -98,5 +109,9 @@
 
   .navbar-end:last-child {
     margin-right: 2rem;
+  }
+
+  nav .is-success {
+    background-color: #003f2c;
   }
 </style>

@@ -11,7 +11,8 @@
   }
 </script>
 
-<img class="image" src={urlFor(logo).width(200).url()} alt="Craighead logo" />
+<!-- <img class="image" src={urlFor(logo).width(200).url()} alt="Craighead logo" /> -->
+<img src="/crest.png" alt="Craighead Diocesan School Crest" class="image">
 <div class="is-brand has-text-dark">
   <span class="is-brand-top is-size-3"> Craighead </span>
   <hr />
@@ -24,12 +25,23 @@
     src: url('/AngleciaProDisplay-Regular.otf') format('opentype');
   }
 
+  @font-face {
+    font-family: 'Maleah-Light';
+    src: url('/Maleah-Light.ttf') format('truetype');
+  }
+  /* @font-face {
+    font-family: 'Maleah';
+    src: url('/Maleah.ttf') format('truetype');
+  } */
+
   span {
-    font-family: 'Anglecia Pro Display', sans-serif;
+    font-family: 'Maleah-Light', sans-serif;
+    color: #003F2C;
   }
 
   img.image {
     max-height: 5rem;
+    margin-left: 1.5em;
   }
 
   .is-brand {
@@ -42,11 +54,11 @@
   }
 
   .is-brand-top {
-    margin-bottom: -0.4rem;
+    margin-bottom: -0.5rem;
   }
 
   .is-brand-bottom {
-    margin-top: 0.4rem;
+    margin-top: 0rem;
     font-size: 1.1rem;
   }
 

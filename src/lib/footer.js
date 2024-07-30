@@ -10,6 +10,7 @@ export default writable({
     { title: `Kōrero`, link: `https://craighead.school.nz/korero/` },
     { title: `CraigNet - Parent & Student Info Portal`, link: `https://cds.craighead.school.nz/craignet/` },
     { title: `KAMAR Student/Parent Portal`, link: `https://portal.craighead.school.nz/index.php` },
+    { title: `Uniform Shop`, link: `https://cds.craighead.school.nz/uniform/` },
     { title: `Craighead Sports Portal`, link: `https://www.sporty.co.nz/craighead` },
     { title: `Wellbeing Website`, link: `https://sites.google.com/craighead.school.nz/studentwellbeingsite/home` },
     { title: `School Policies and Procedures`, link: `https://craighead.schooldocs.co.nz/` },

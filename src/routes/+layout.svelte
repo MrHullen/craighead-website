@@ -15,16 +15,16 @@
 
   setContext('logo', data.assets.logo)
 
-  onMount(() => {
-    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    let bgImageWidth = 1440
-    if (vw <= 700) {
-      bgImageWidth = 700
-    } else if (vw <= 1000) {
-      bgImageWidth = 1000
-    }
-    document.body.style.backgroundImage = "url('" + urlFor(data.assets.backgroundImage).auto('format').width(bgImageWidth).url() + "')"
-  })
+  // onMount(() => {
+  //   const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+  //   let bgImageWidth = 1440
+  //   if (vw <= 700) {
+  //     bgImageWidth = 700
+  //   } else if (vw <= 1000) {
+  //     bgImageWidth = 1000
+  //   }
+  //   document.body.style.backgroundImage = "url('" + urlFor(data.assets.backgroundImage).auto('format').width(bgImageWidth).url() + "')"
+  // })
 </script>
 
 <Nav logo={data.assets.logo} />
@@ -35,7 +35,7 @@
 
 <style>
   :global(body) {
-    background-color: #e9e9e9;
+    background-color: #fff;
     height: 100%;
     width: 100%;
     margin: 0px;
@@ -43,5 +43,10 @@
     overflow-x: hidden;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  /* fixes scroll margin for anchor links */
+  :global(*) {
+    scroll-margin-top: 100px;
   }
 </style>

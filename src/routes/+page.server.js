@@ -2,27 +2,15 @@ import client from '$lib/client'
 
 export async function load({ params }) {
   const content = await client.fetch(`
-    {
-      'studentWelcome': *[_id == 'studentWelcome'][0]{
-        blurb,
-        image
-      },
-      'principalsWelcome': *[_id == 'principalsWelcome'][0]{
-        quote,
-        principal,
-        image
-      },
-      'studentSpotlights': *[_id == 'studentSpotlights'][0]{
-        studentSpotlights[]
-      }
-    }
+  {
+    'landingVideo': *[_id == "video"][0]{
+      "playbackId": video.asset->playbackId
+    },
+    'tileImages': *[_id == "tileImages"][0],
+  }
   `)
 
-  if (content) {
-    return {
-      content: content,
-    }
-  }
+  if (content) return { ...content }
 
   return {
     status: 500,
