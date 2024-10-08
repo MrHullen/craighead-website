@@ -1,7 +1,7 @@
 <script>
   import Paragraph from '$lib/page/Paragraph.svelte'
   import Tiles from '$lib/page/Tiles.svelte'
-  import BannerImage from '$lib/page/BannerImage.Svelte'
+  import BannerImage from '$lib/page/BannerImage.svelte'
 
   export let section
 </script>
