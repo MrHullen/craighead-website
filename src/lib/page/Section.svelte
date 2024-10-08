@@ -16,4 +16,6 @@
     </article>
   {/if}
 </section>
-<BannerImage image={section.bannerImage} />
+{#if section.bannerImage}
+  <BannerImage image={section.bannerImage} />
+{/if}
