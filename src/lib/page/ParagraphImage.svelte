@@ -4,7 +4,7 @@
   export let portableText
 </script>
 
-<img src={urlFor(portableText.value).auto('format').height(200).width(300).url()} />
+<img src={urlFor(portableText.value).auto('format').height(200).width(300).url()} alt="Accompanying." />
 
 <style>
   img {

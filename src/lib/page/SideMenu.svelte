@@ -30,9 +30,7 @@
           href="#{section.heading.replace(/\s+/g, '-').toLowerCase()}"
           class:is-active={$page.url.href.includes(`#${section.heading.replace(/\s+/g, '-').toLowerCase()}`)}
           aria-current={$page.url.href.includes(`#${section.heading.replace(/\s+/g, '-').toLowerCase()}`) ? 'page' : undefined}
-          on:click={() => {
-            test($page.url.href)
-          }}>
+        >
           {section.heading}
         </a>
       </li>
