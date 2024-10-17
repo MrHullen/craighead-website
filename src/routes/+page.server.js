@@ -6,7 +6,7 @@ export async function load({ params }) {
     'landingVideo': *[_id == "video"][0]{
       "playbackId": video.asset->playbackId
     },
-    'tileImages': *[_id == "tileImages"][0],
+    'tiles': *[title == 'Landing Page Tiles'][0].tiles,
   }
   `)
 

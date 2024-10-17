@@ -4,8 +4,9 @@
   export let title
   export let description
 
-  // get the logo
+  // get the favicon
   import { getContext } from 'svelte'
+  let favicon = getContext('favicon')
   let logo = getContext('logo')
 
   // get the current URL
@@ -16,7 +17,7 @@
 
 <svelte:head>
   <title>{title}</title>
-  <link rel="icon" type="image/x-icon" href="/crest-icon.png">
+  <link rel="icon" type="image/x-icon" href={urlFor(favicon).format('png').url()} >
   <meta name="description" content={description} />
   <meta property="og:title" content="Craighead Diocesan School - {title}" />
   <meta property="og:url" content={url} />

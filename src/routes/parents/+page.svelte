@@ -1,35 +1,18 @@
 <script>
   import Head from '$lib/Head.svelte'
   import Header from '$lib/subpages/Header.svelte'
-  import footer from '$lib/footer'
-  import { urlFor } from '$lib/utils/image'
-  const content = $footer 
 
-  // get the favicon
-  import { getContext } from 'svelte'
-  let logo = getContext('logo')
+  export let data
 </script>
 
-<svelte:head>
-  <title>Parents</title>
-  <meta name="description" content="Pages and resources for parents of current students." />
-  <meta property="og:title" content="Craighead Diocesan School - Parents" />
-  <meta property="og:url" content="https://craighead.school.nz/parents" />
-  <meta property="og:description" content="Pages and resources for parents of current students." />
-  <meta property="og:image" content={urlFor(logo).auto('format').bg('fff').url()} />
-</svelte:head>
-
-<Head
-  title=""
-  description=""
-  />
+<Head title="Parents" description="Pages and resources for parents of current students." />
 
 <Header title="Parents" subtitle="Links for parents of current students." />
 
 <section class="content section">
 
-  {#each content.usefulLinks as usefulLink}
-    <a class="box" href="{usefulLink.link}">{usefulLink.title}</a>
+  {#each data.links as link}
+    <a class="box" href="{link.url}">{link.title}</a>
   {/each}
 </section>
 

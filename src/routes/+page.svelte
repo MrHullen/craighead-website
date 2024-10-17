@@ -1,7 +1,7 @@
 <script>
   import Head from '$lib/Head.svelte'
   import Video from '$lib/Video.svelte'
-  import Tile from '$lib/Tile.svelte'
+  import Tile from '$lib/page/Tile.svelte'
   import LandingText from '$lib/LandingText.svelte'
   // import OpenDay from '$lib/OpenDay.svelte'
 
@@ -20,12 +20,9 @@
   </section>
 
   <section class="tiles">
-    <Tile title="Teaching and Learning" link="/our-school" data={data.tileImages.teachingLearning} />
-    <Tile title="Special Character" link="/about-us#special-character" data={data.tileImages.specialCharacter} />
-    <Tile title="Boarding" link="/our-school#boarding" data={data.tileImages.boarding} />
-    <Tile title="Wellbeing" link="/our-school#learning-support" data={data.tileImages.wellbeing} />
-    <Tile title="Co-curricular" link="/our-school#sports" data={data.tileImages.coCurricular} />
-    <Tile title="International" link="/enrolment#international" data={data.tileImages.international} />
+    {#each data.tiles as tile}
+      <Tile {tile} />
+    {/each}
   </section>
 </main>
 

@@ -2,9 +2,6 @@
   import '../app.scss'
   import Nav from '$lib/Nav.svelte'
   import Footer from '$lib/Footer.svelte'
-  import { urlFor } from '$lib/utils/image'
-  import { onMount } from 'svelte'
-  import { setContext } from 'svelte'
 
   import { dev } from '$app/environment'
   import { inject } from '@vercel/analytics'
@@ -13,25 +10,16 @@
 
   export let data
 
-  setContext('logo', data.assets.logo)
-
-  // onMount(() => {
-  //   const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-  //   let bgImageWidth = 1440
-  //   if (vw <= 700) {
-  //     bgImageWidth = 700
-  //   } else if (vw <= 1000) {
-  //     bgImageWidth = 1000
-  //   }
-  //   document.body.style.backgroundImage = "url('" + urlFor(data.assets.backgroundImage).auto('format').width(bgImageWidth).url() + "')"
-  // })
+  import { setContext } from 'svelte'
+  setContext('logo', data.assets.general.logo)
+  setContext('favicon', data.assets.general.favIcon)
 </script>
 
-<Nav logo={data.assets.logo} />
+<Nav navBar={data.assets.navBar} />
 
 <slot />
 
-<Footer />
+<Footer footer={data.assets.footer} />
 
 <style>
   :global(body) {

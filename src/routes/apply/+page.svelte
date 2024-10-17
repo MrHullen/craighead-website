@@ -66,5 +66,6 @@
 <style>
   div {
     margin: 3em 0;
+    height: fit-content;
   }
 </style>

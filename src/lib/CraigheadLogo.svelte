@@ -1,18 +1,12 @@
 <script>
-  import client from '$lib/client'
-  import imageUrlBuilder from '@sanity/image-url'
+  import { urlFor } from '$lib/utils/image'
+  import { getContext } from 'svelte'
 
-  export let logo
-
-  const builder = imageUrlBuilder(client)
-
-  function urlFor(source) {
-    return builder.image(source)
-  }
+  let logo = getContext('logo')
 </script>
 
-<!-- <img class="image" src={urlFor(logo).width(200).url()} alt="Craighead logo" /> -->
-<img src="/crest.png" alt="Craighead Diocesan School Crest" class="image">
+<img class="image" src={urlFor(logo).width(200).url()} alt="Craighead logo" />
+<!-- <img src="/crest.png" alt="Craighead Diocesan School Crest" class="image"> -->
 <div class="is-brand has-text-dark">
   <span class="is-brand-top is-size-3"> Craighead </span>
   <hr />

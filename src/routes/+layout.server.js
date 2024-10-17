@@ -2,16 +2,19 @@ import client from '$lib/client'
 
 export async function load({ params }) {
   const assets = await client.fetch(`
-    *[_id == 'general'][0]{
-      favIcon,
-      logo,
-      'application': application.asset->url
+    {
+      'general': *[_id == 'general'][0],      
+      'navBar': *[_type == 'navBar'][0],
+      'footer': {
+        'address': *[_id == 'address'][0],
+        'usefulLinks': *[_id == 'usefulLinks'][0],
+      },
     }
   `)
 
   if (assets) {
     return {
-      assets: assets,
+      assets,
     }
   }
 

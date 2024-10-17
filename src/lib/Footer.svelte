@@ -1,7 +1,5 @@
 <script>
-  import footer from '$lib/footer'
-
-  const content = $footer
+  export let footer
 </script>
 
 <footer class="footer content">
@@ -10,17 +8,17 @@
       <!-- column 1 -->
       <h2>Contact us</h2>
       <address class="contact-us">
-        {content.addressLine1} <br />
-        {content.addressLine2} <br />
-        <a href="tel:{content.phoneNumber}">{content.phoneNumber}</a> <br />
-        <a href="mailto:{content.emailAddress}">{content.emailAddress}</a> <br />
+        {footer.address.addressLine1} <br />
+        {footer.address.addressLine2} <br />
+        <a href="tel:{footer.address.phoneNumber}">{footer.address.phoneNumber}</a> <br />
+        <a href="mailto:{footer.address.emailAddress}">{footer.address.emailAddress}</a> <br />
       </address>
     </div>
     <div>
       <!-- column 2 -->
       <h2>Useful links</h2>
       <ul class="useful-links">
-        {#each content.usefulLinks as usefulLink}
+        {#each footer.usefulLinks.usefulLinks as usefulLink}
           <li><a href={usefulLink.link}>{usefulLink.title}</a></li>
         {/each}
       </ul>
