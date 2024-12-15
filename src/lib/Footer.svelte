@@ -26,7 +26,7 @@
   </div>
   <div class="has-text-centered">
     <p>
-      <strong>&copy; Craighead Diocesan School 2023</strong>
+      <strong>&copy; Craighead Diocesan School 2025</strong>
     </p>
     <p>
       <a href="https://github.com/MrHullen/craighead-website" target="_blank" rel="noreferrer">Site</a>
